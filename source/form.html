@@ -52,7 +52,8 @@
               </div>
               <div class="form__group-wrapper">
                 <label class="form__label" for="cat-weight">Вес (кг):*</label>
-                <input class="form__control-input input input--numeric" type="number" id="cat-weight" name="weight" placeholder="7" min="0" required>
+                <input class="form__control-input input input--numeric" type="number" id="cat-weight" name="weight"
+                  placeholder="7" min="0" required>
               </div>
               <div class="form__group-wrapper">
                 <label class="form__label" for="cat-age">Возраст (лет):</label>
@@ -95,9 +96,8 @@
             </fieldset>
             <fieldset class="form__group form__group--comments">
               <legend class="form__title">Комментарий</legend>
-              <label>
-                <textarea class="form__control-textarea input" rows="5" id="comments" name="comments" placeholder="Расскажите обо всех повадках кота" autocomplete="off"></textarea>
-              </label>
+              <label for="comments"><span class="visually-hidden">Дополнительная информация о коте</span></label>
+              <textarea class="form__control-textarea input" rows="5" id="comments" name="comments" placeholder="Расскажите обо всех повадках кота" autocomplete="off"></textarea>
             </fieldset>
             <fieldset class="form__group form__group--comments">
               <legend class="form__title">Дополнительно</legend>
