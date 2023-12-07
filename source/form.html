@@ -3,16 +3,25 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Кэт энерджи</title>
+
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
   <header class="header">
     <a class="header__logo" href="index.html">
-      <img class="header__logo-image" src="images/company-logo.svg" width="33" height="38" alt="Логотип «Кэт энерджи».">
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/company-logo-desktop.svg">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/company-logo-tablet.svg">
+        <img class="header__logo-image" src="images/company-logo-mobile.svg" width="33" height="38" alt="Логотип «Кэт энерджи».">
+      </picture>
       <img class="header__logo-title" src="images/logo-title.svg" width="101" height="18" alt="Cat Energy.">
     </a>
     <nav class="main-nav">
@@ -45,22 +54,22 @@
       <div class="program__wrapper">
         <h1 class="program__title">Подбор программы</h1>
         <p class="program__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-        <form class="program__form form" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="program__form form" id="program-form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="form__group form__group--base-info">
             <legend class="visually-hidden">Базовая информация о коте</legend>
             <div class="form__group-wrapper">
-              <label class="form__label" for="cat-name">Имя:*</label>
-              <input class="form__control-input input" type="text" id="cat-name" name="name" placeholder="Барсик"
+              <label class="form__label" for="program-form-name">Имя:*</label>
+              <input class="form__control-input input" type="text" id="program-form-name" name="program-form-name" placeholder="Барсик"
                 required>
             </div>
             <div class="form__group-wrapper">
-              <label class="form__label" for="cat-weight">Вес (кг):*</label>
-              <input class="form__control-input input input--numeric" type="number" id="cat-weight" name="weight"
+              <label class="form__label" for="program-form-weight">Вес (кг):*</label>
+              <input class="form__control-input input input--numeric" type="number" id="program-form-weight" name="program-form-weight"
                 placeholder="7" min="0" required>
             </div>
             <div class="form__group-wrapper">
-              <label class="form__label" for="cat-age">Возраст (лет):</label>
-              <input class="form__control-input input input--numeric" type="number" id="cat-age" name="age"
+              <label class="form__label" for="program-form-age">Возраст (лет):</label>
+              <input class="form__control-input input input--numeric" type="number" id="program-form-age" name="program-form-age"
                 placeholder="7" min="0">
             </div>
           </fieldset>
@@ -68,21 +77,21 @@
             <legend class="visually-hidden">Тип программы</legend>
             <ul class="form__group-list">
               <li class="form__group-item">
-                <label class="form__label">
-                  <input class="form__control-input" type="radio" name="fit-program" value="weight_loss" checked>
-                  <span class="form__label-text">Похудение</span>
+                <label class="form__radio">
+                  <input class="form__control-input" type="radio" name="program-form-goal" value="weight_loss" checked>
+                  <span class="form__label">Похудение</span>
                 </label>
               </li>
               <li class="form__group-item">
-                <label class="form__label">
-                  <input class="form__control-input" type="radio" name="fit-program" value="weight_gain">
-                  <span class="form__label-text">Набор массы</span>
+                <label class="form__radio">
+                  <input class="form__control-input" type="radio" name="program-form-goal" value="weight_gain">
+                  <span class="form__label">Набор массы</span>
                 </label>
               </li>
               <li class="form__group-item">
-                <label class="form__label">
-                  <input class="form__control-input" type="radio" name="fit-program" value="I_dont_know">
-                  <span class="form__label-text">Не знаю (Нужен ваш совет)</span>
+                <label class="form__radio">
+                  <input class="form__control-input" type="radio" name="program-form-goal" value="I_dont_know">
+                  <span class="form__label">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
@@ -90,52 +99,52 @@
           <fieldset class="form__group form__group--contacts">
             <legend class="form__title">Контактные данные (владельца кота)</legend>
             <div class="form__group-wrapper">
-              <label class="form__label" for="email">E-mail:*</label>
-              <input class="form__control-input input input--email" type="email" id="email" name="email"
+              <label class="form__label" for="program-form-email">E-mail:*</label>
+              <input class="form__control-input input input--email" type="email" id="program-form-email" name="program-form-email"
                 placeholder="kuklachev@gmail.com" required>
             </div>
             <div class="form__group-wrapper">
-              <label class="form__label" for="phone">Телефон:*</label>
-              <input class="form__control-input input input--tel" type="tel" id="phone" name="phone"
+              <label class="form__label" for="program-form-phone">Телефон:*</label>
+              <input class="form__control-input input input--tel" type="tel" id="program-form-phone" name="program-form-phone"
                 placeholder="8 (960) 900-60-90" required>
             </div>
           </fieldset>
           <fieldset class="form__group form__group--comments">
             <legend class="form__title">Комментарий</legend>
-            <label for="comments"><span class="visually-hidden">Дополнительная информация о коте</span></label>
-            <textarea class="form__control-textarea input" rows="5" id="comments" name="comments"
+            <label for="program-form-comments"><span class="visually-hidden">Дополнительная информация о коте</span></label>
+            <textarea class="form__control-textarea input" rows="5" id="program-form-comments" name="program-form-comments"
               placeholder="Расскажите обо всех повадках кота" autocomplete="off"></textarea>
           </fieldset>
           <fieldset class="form__group form__group--comments">
             <legend class="form__title">Дополнительно</legend>
             <ul class="form__group-list">
               <li class="form__group-item">
-                <label class="form__label">
-                  <input class="form__control-input input visually-hidden" type="checkbox" name="milk">
-                  <span class="form__control-label">Cахарозаменитель</span>
+                <label class="form__checkbox">
+                  <input class="form__control-input input visually-hidden" type="checkbox" name="program-form-sweetener">
+                  <span class="form__label">Cахарозаменитель</span>
                 </label>
               </li>
               <li class="form__group-item">
-                <label class="form__label">
-                  <input class="form__control-input input visually-hidden" type="checkbox" name="milk">
-                  <span class="form__label-text">Питьевая вода</span>
+                <label class="form__checkbox">
+                  <input class="form__control-input input visually-hidden" type="checkbox" name="program-form-water">
+                  <span class="form__label">Питьевая вода</span>
                 </label>
               </li>
               <li class="form__group-item">
-                <label class="form__label">
-                  <input class="form__control-input input visually-hidden" type="checkbox" name="milk">
-                  <span class="form__label-text">Молоко</span>
+                <label class="form__checkbox">
+                  <input class="form__control-input input visually-hidden" type="checkbox" name="program-form-milk">
+                  <span class="form__label">Молоко</span>
                 </label>
               </li>
               <li class="form__group-item">
-                <label class="form__label">
-                  <input class="form__control-input input visually-hidden" type="checkbox" name="milk">
-                  <span class="form__label-text">Витамины</span>
+                <label class="form__checkbox">
+                  <input class="form__control-input input visually-hidden" type="checkbox" name="program-form-vitamins">
+                  <span class="form__label">Витамины</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <div class="form__group form__group--submit">
+          <div class="form__group form__group--buttons">
             <button class="form__button button button--primary" type="submit">Отправить заявку</button>
             <p class="form__requirements">* — Обязательные поля</p>
           </div>
@@ -149,8 +158,11 @@
         <address class="contacts__address">
           <p class="contacts__address-description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </address>
-        <img class="contacts__address-map" src="images/address-map.jpg" width="320" height="362"
-          alt="Карта с адресом компании.">
+        <picture>
+          <source type="image/png" media="(min-width: 1440px)" srcset="images/address-map-desktop@1x.png 1x, images/address-map-desktop@2x.png 2x" width="1440" height="400">
+          <source type="image/png" media="(min-width: 768px)" srcset="images/address-map-tablet@1x.png 1x, images/address-map-tablet@2x.png 2x" width="768" height="400">
+          <img class="contacts__address-map" src="images/address-map-mobile@1x.png" srcset="images/address-map-mobile@2x.png 2x" width="320" height="362" alt="Карта с адресом компании.">
+        </picture>
       </div>
     </section>
   </main>

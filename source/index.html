@@ -3,16 +3,25 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Кэт энерджи</title>
+
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
   <header class="header">
     <a class="header__logo" href="index.html">
-      <img class="header__logo-image" src="images/company-logo.svg" width="33" height="38" alt="Логотип «Кэт энерджи».">
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/company-logo-desktop.svg">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/company-logo-tablet.svg">
+        <img class="header__logo-image" src="images/company-logo-mobile.svg" width="33" height="38" alt="Логотип «Кэт энерджи».">
+      </picture>
       <img class="header__logo-title" src="images/logo-title.svg" width="101" height="18" alt="Cat Energy.">
     </a>
     <nav class="main-nav">
@@ -46,13 +55,12 @@
       <div class="hero__wrapper">
         <h2 class="hero__title">Функциональное питание для котов</h2>
         <p class="hero__description">Занялся собой? Займись котом!</p>
-        <img class="hero__image" src="images/hero.png" width="280" height="270"
-          alt="Упаковка фирменной еды Cat Energy Pro.">
-        <a class="hero__button button button--primary" href="#">
-          <span>
-            Подобрать программу
-          </span>
-        </a>
+        <picture>
+          <source type="image/png" media="(min-width: 1440px)" srcset="images/hero-desktop@1x.png 1x, images/hero-desktop@2x.png 2x" width="552" height="499">
+          <source type="image/png" media="(min-width: 768px)" srcset="images/hero-tablet@1x.png 1x, images/hero-tablet@2x.png 2x" width="709" height="609">
+          <img class="hero__image" src="images/hero-mobile@1x.png" srcset="images/hero-mobile@2x.png 2x" width="280" height="270" alt="Упаковка фирменной еды Cat Energy Pro.">
+        </picture>
+        <a class="hero__button button button--primary" href="#">Подобрать программу</a>
       </div>
     </section>
     <section class="advantages">
@@ -60,16 +68,16 @@
         <h2 class="visually-hidden">Наши преимущества.</h2>
         <ul class="advantages__list">
           <li class="advantages__item">
-            <h3 class="advantages__title">Похудение</h3>
-            <p class="advantages__description">Ваш кот весит больше собаки и почти утратил способность лазить по
+            <h3 class="advantages__item-title">Похудение</h3>
+            <p class="advantages__item-description">Ваш кот весит больше собаки и почти утратил способность лазить по
               деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="advantages__button button button--secondary" href="#">Каталог slim</a>
+            <a class="advantages__item-button button button--secondary" href="#">Каталог slim</a>
           </li>
           <li class="advantages__item">
-            <h3 class="advantages__title">Набор массы</h3>
-            <p class="advantages__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy
+            <h3 class="advantages__item-title">Набор массы</h3>
+            <p class="advantages__item-description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy
               Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="advantages__button button button--secondary" href="#">Каталог pro</a>
+            <a class="advantages__item-button button button--secondary" href="#">Каталог pro</a>
           </li>
         </ul>
       </div>
@@ -112,10 +120,16 @@
         <p class="live-example__cost">Затраты на питание: 15 000 РУБ.</p>
         <div class="live-example__slider slider">
           <div class="slider__image-wrapper slider__image-wrapper--before">
-            <img class="slider__image" src="images/cat-before.png" width="280" height="256" alt="Упитанный кот.">
+            <picture>
+              <source type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x" width="560" height="512">
+              <img class="slider__image" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Упитанный кот.">
+            </picture>
           </div>
           <div class="slider__image-wrapper slider__image-wrapper--after">
-            <img class="slider__image" src="images/cat-after.png" width="280" height="256" alt="Тощий кот.">
+            <picture>
+              <source type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x" width="560" height="512">
+              <img class="slider__image" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Тощий кот.">
+            </picture>
           </div>
         </div>
       </div>
@@ -127,8 +141,11 @@
         <address class="contacts__address">
           <p class="contacts__address-description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </address>
-        <img class="contacts__address-map" src="images/address-map.jpg" width="320" height="362"
-          alt="Карта с адресом компании.">
+        <picture>
+          <source type="image/png" media="(min-width: 1440px)" srcset="images/address-map-desktop@1x.png 1x, images/address-map-desktop@2x.png 2x" width="1440" height="400">
+          <source type="image/png" media="(min-width: 768px)" srcset="images/address-map-tablet@1x.png 1x, images/address-map-tablet@2x.png 2x" width="768" height="400">
+          <img class="contacts__address-map" src="images/address-map-mobile@1x.png" srcset="images/address-map-mobile@2x.png 2x" width="320" height="362" alt="Карта с адресом компании.">
+        </picture>
       </div>
     </section>
   </main>
