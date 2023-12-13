@@ -1,0 +1,21 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.program__title {
+  @include font-info(inherit, 60px, 60px);
+
+  @include mobile {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.program__description {
+  @include font-info(inherit, 20px, 30px);
+  text-transform: uppercase;
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

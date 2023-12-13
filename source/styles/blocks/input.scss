@@ -1,0 +1,15 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.input {
+  @include font-info(inherit, 20px, 20px);
+  text-transform: uppercase;
+  color: $font-color-accent;
+  padding: 11px 20px;
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 14px 15px;
+  }
+}

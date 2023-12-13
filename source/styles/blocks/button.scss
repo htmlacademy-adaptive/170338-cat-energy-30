@@ -1,0 +1,43 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.button {
+  @include button-base;
+  border: none;
+}
+
+.button--primary {
+  @include button-large;
+  display: block;
+  text-align: center;
+  background: $background-color-accent;
+  color: $font-color-alternate;
+}
+
+.button--secondary {
+  @include button-small;
+  display: block;
+  text-align: center;
+  background: $background-color-accent;
+  color: $font-color-alternate;
+}
+
+.button--accent {
+  @include button-small;
+  display: block;
+  text-align: center;
+  background: $background-color-alternate;
+  color: $font-color-accent;
+}
+
+.button--link {
+  @include button-base;
+  @include font-info(inherit, 20px, 20px);
+  display: inline-block;
+  color: $font-color-primary;
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

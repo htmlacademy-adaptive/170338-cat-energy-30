@@ -1,0 +1,37 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.additional__title {
+  @include font-info(inherit, 36px, 36px);
+  text-transform: uppercase;
+
+  @include mobile {
+    font-size: 24px;
+    line-height: 37px;
+  }
+}
+
+.additional__list {
+  @include list-base;
+}
+
+.additional__item-title {
+  @include font-info(inherit, 20px, 20px);
+  text-transform: uppercase;
+  color: $font-color-primary-alternate-accent;
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.additional__item-description {
+  @include font-info($font-secondary, 16px, 20px);
+  color: $font-color-accent;
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}

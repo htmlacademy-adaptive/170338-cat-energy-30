@@ -1,0 +1,11 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.hero__title {
+  @include font-info(inherit, 60px, 60px);
+
+  @include mobile {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}

@@ -1,7 +1,6 @@
 @use "../global/variables.scss";
 @use "../global/mixins.scss";
 
-.footer__developer-title {
+.gift__description {
   @include font-info($font-secondary, 16px, 20px);
-  color: $font-color-accent;
 }
