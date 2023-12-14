@@ -1,1 +1,27 @@
-/* здесь используйте глобальные переменные */
+// Fonts
+$font-header: "Oswald", sans-serif;
+$font-primary: "Lato", sans-serif;
+
+// Colors
+//Background colors
+$background-color-primary: #ffffff;
+$background-color-accent: #68b738;
+$background-color-alternate: #f2f2f2;
+$background-color-alternate-accent: #eaeaea;
+
+//Font colors
+$font-color-primary: #000000;
+$font-color-primary-alternate: #111111;
+$font-color-primary-alternate-accent: #222222;
+$font-color-alternate: #ffffff;
+$font-color-accent: #444444;
+
+//Button colors
+$button-color-primary: #68b738;
+$button-color-primary-hover: #5eaa2f;
+$button-color-alternate: #f2f2f2;
+$button-color-alternate-hover: #ebebeb;
+
+// View Port Size
+$view-port-desktop: 1440px;
+$view-port-tablet: 768px;

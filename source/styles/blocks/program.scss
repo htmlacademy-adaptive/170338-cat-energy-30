@@ -1,0 +1,21 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.program__title {
+  @include font-info($font-header, 36px, 36px);
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.program__description {
+  @include font-info($font-header, 14px, 18px);
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

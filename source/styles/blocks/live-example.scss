@@ -1,0 +1,37 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.live-example__wrapper {
+  background-color: $background-color-alternate-accent;
+}
+
+.live-example__description {
+  @include text-description;
+}
+
+.live-example__value--result {
+  @include font-info($font-header, 24px, 24px);
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.live-example__value--description {
+  @include font-info($font-header, 12px, 12px);
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.live-example__cost {
+  @include font-info($font-header, 14px, 20px);
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

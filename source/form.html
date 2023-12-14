@@ -8,8 +8,8 @@
 
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="images/favicons/apple.png">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
 </head>
@@ -26,22 +26,22 @@
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+        <span class="visually-hidden">Открыть меню.</span>
       </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a href="index.html">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">
               Главная
             </a>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html">
+            <a class="site-list__link" href="catalog.html">
               Каталог продукции
             </a>
           </li>
-          <li class="site-list__item">
-            <a href="form.html">
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link" href="form.html">
               Подбор программы
             </a>
           </li>
@@ -159,6 +159,9 @@
           <p class="contacts__address-description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </address>
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="images/address-map-desktop@1x.webp 1x, images/address-map-desktop@2x.webp 2x" width="1440" height="400">
+          <source type="image/webp" media="(min-width: 768px)" srcset="images/address-map-tablet@1x.webp 1x, images/address-map-tablet@2x.webp 2x" width="768" height="400">
+          <source type="image/webp" srcset="images/address-map-mobile@1x.webp 1x, images/address-map-mobile@2x.webp 2x" width="320" height="362">
           <source type="image/png" media="(min-width: 1440px)" srcset="images/address-map-desktop@1x.png 1x, images/address-map-desktop@2x.png 2x" width="1440" height="400">
           <source type="image/png" media="(min-width: 768px)" srcset="images/address-map-tablet@1x.png 1x, images/address-map-tablet@2x.png 2x" width="768" height="400">
           <img class="contacts__address-map" src="images/address-map-mobile@1x.png" srcset="images/address-map-mobile@2x.png 2x" width="320" height="362" alt="Карта с адресом компании.">

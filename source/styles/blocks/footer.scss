@@ -1,0 +1,7 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.footer__developer-title {
+  @include font-info($font-primary, 16px, 20px);
+  color: $font-color-accent;
+}

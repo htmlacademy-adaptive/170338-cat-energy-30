@@ -1,0 +1,7 @@
+@use "../global/mixins.scss";
+
+.social__list {
+  @include list-base;
+
+  display: flex;
+}

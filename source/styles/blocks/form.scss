@@ -1,0 +1,48 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.form__group {
+  border: 0;
+}
+
+.form__group-list {
+  @include list-base;
+}
+
+.form__title {
+  @include font-info($font-header, 24px, 26px);
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.form__label {
+  @include font-info($font-header, 16px, 18px);
+  text-transform: uppercase;
+  color: $font-color-accent;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.form__control-textarea {
+  @include font-info($font-header, 16px, 18px);
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form__requirements {
+  @include font-info($font-primary, 14px, 16px);
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

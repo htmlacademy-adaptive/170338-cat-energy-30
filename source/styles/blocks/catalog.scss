@@ -1,0 +1,15 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.catalog__title {
+  @include font-info($font-header, 36px, 36px);
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.catalog__list {
+  @include list-base;
+}

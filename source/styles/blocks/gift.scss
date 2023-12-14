@@ -1,0 +1,6 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.gift__description {
+  @include font-info($font-primary, 16px, 20px);
+}

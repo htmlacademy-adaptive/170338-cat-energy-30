@@ -1,0 +1,24 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.site-list {
+  @include font-info($font-header, 20px, 20px);
+  @include list-base;
+  font-family: inherit;
+  text-transform: uppercase;
+  display: flex;
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.site-list__link {
+  text-decoration: none;
+}

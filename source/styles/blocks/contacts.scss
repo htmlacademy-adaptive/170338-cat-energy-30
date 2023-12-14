@@ -1,0 +1,25 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.contacts__title {
+  @include font-info($font-header, 16px, 20px);
+  color: $font-color-primary-alternate;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.contacts__address {
+  @include font-info($font-primary, 14px, 20px);
+  color: $font-color-accent;
+
+  @include tablet {
+    font-size: 16px;
+  }
+}
+
+.contacts__wrapper--alternate {
+  background-color: $background-color-alternate;
+}

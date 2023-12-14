@@ -1,0 +1,67 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.button {
+  @include button-base;
+  border: none;
+}
+
+.button--primary {
+  @include button-large;
+  display: block;
+  text-align: center;
+  background: $button-color-primary;
+  color: $font-color-alternate;
+
+  &:hover {
+    background: $button-color-primary-hover;
+  }
+
+  &:active {
+    color: rgba($font-color-alternate, 0.3);
+  }
+}
+
+.button--secondary {
+  @include button-small;
+  display: block;
+  text-align: center;
+  background: $button-color-primary;
+  color: $font-color-alternate;
+
+  &:hover {
+    background: $button-color-primary-hover;
+  }
+
+  &:active {
+    color: rgba($font-color-alternate, 0.3);
+  }
+}
+
+.button--accent {
+  @include button-small;
+  display: block;
+  text-align: center;
+  background: $button-color-alternate;
+  color: $font-color-accent;
+
+  &:hover {
+    background: $font-color-accent;
+  }
+}
+
+.button--link {
+  @include button-base;
+  @include font-info($font-header, 16px, 16px);
+  display: inline-block;
+  color: $font-color-primary;
+
+  &:active {
+    color: rgba($font-color-primary, 0.3);
+  }
+
+  @include tablet {
+    font-size: 20px;
+    line-height: normal;
+  }
+}

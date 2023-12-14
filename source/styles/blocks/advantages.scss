@@ -1,0 +1,24 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.advantages__list {
+  @include list-base;
+}
+
+.advantages__item {
+  background-color: $background-color-alternate;
+}
+
+.advantages__item-title {
+  @include font-info($font-header, 24px, 37px);
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 36px
+  }
+}
+
+.advantages__item-description {
+  @include text-description;
+}

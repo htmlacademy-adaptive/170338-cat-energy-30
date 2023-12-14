@@ -1,0 +1,11 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.section-title {
+  @include font-info($font-header, 36px, 40px);
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}

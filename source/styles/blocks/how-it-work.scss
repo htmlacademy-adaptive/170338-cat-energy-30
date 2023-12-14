@@ -1,0 +1,9 @@
+@use "../global/mixins.scss";
+
+.how-it-work__list {
+  @include list-base;
+}
+
+.how-it-work__item {
+  @include text-description;
+}

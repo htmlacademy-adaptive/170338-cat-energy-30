@@ -1,0 +1,23 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.page {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.page__body {
+  @include font-info($font-header, 16px, 18px);
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: $background-color-primary;
+  color: $font-color-primary;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
