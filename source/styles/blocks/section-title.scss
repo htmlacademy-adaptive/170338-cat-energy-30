@@ -2,12 +2,10 @@
 @use "../global/mixins.scss";
 
 .section-title {
-  font-family: $font-header;
-  font-size: 60px;
-  line-height: 60px;
+  @include font-info($font-header, 36px, 40px);
 
-  @include mobile {
-    font-size: 36px;
-    line-height: 40px;
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
   }
 }

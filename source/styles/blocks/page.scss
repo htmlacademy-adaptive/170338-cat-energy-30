@@ -7,7 +7,7 @@
 }
 
 .page__body {
-  @include font-info($font-header, 20px, 20px);
+  @include font-info($font-header, 16px, 18px);
   font-style: normal;
   font-weight: 400;
   margin: 0;
@@ -16,8 +16,8 @@
   background-color: $background-color-primary;
   color: $font-color-primary;
 
-  @include mobile {
-    font-size: 16px;
-    line-height: 18px;
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
   }
 }

@@ -2,22 +2,21 @@
 @use "../global/mixins.scss";
 
 .contacts__title {
-  font-size: 20px;
-  line-height: 26px;
+  @include font-info($font-header, 16px, 20px);
   color: $font-color-primary-alternate;
 
-  @include mobile {
-    font-size: 16px;
-    line-height: 20px;
+  @include tablet {
+    font-size: 20px;
+    line-height: 26px;
   }
 }
 
 .contacts__address {
-  @include font-info($font-primary, 16px, 20px);
+  @include font-info($font-primary, 14px, 20px);
   color: $font-color-accent;
 
-  @include mobile {
-    font-size: 14px;
+  @include tablet {
+    font-size: 16px;
   }
 }
 

@@ -2,12 +2,12 @@
 @use "../global/mixins.scss";
 
 .additional__title {
-  @include font-info($font-header, 36px, 36px);
+  @include font-info($font-header, 24px, 37px);
   text-transform: uppercase;
 
-  @include mobile {
-    font-size: 24px;
-    line-height: 37px;
+  @include tablet {
+    font-size: 36px;
+    line-height: 36px;
   }
 }
 
@@ -16,22 +16,22 @@
 }
 
 .additional__item-title {
-  @include font-info($font-header, 20px, 20px);
+  @include font-info($font-header, 16px, 16px);
   text-transform: uppercase;
   color: $font-color-primary-alternate-accent;
 
-  @include mobile {
-    font-size: 16px;
-    line-height: 16px;
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
 .additional__item-description {
-  @include font-info($font-primary, 16px, 20px);
+  @include font-info($font-primary, 14px, 14px);
   color: $font-color-accent;
 
-  @include mobile {
-    font-size: 14px;
-    line-height: 14px;
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
   }
 }

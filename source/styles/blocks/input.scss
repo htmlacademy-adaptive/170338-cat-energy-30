@@ -2,14 +2,14 @@
 @use "../global/mixins.scss";
 
 .input {
-  @include font-info($font-header, 20px, 20px);
+  @include font-info($font-header, 16px, 18px);
   text-transform: uppercase;
   color: $font-color-accent;
-  padding: 11px 20px;
+  padding: 14px 15px;
 
-  @include mobile {
-    font-size: 16px;
-    line-height: 18px;
-    padding: 14px 15px;
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 11px 20px;
   }
 }
