@@ -1,5 +1,5 @@
 .catalog-card__title {
-  @include font-info(inherit, 20px, 24px);
+  @include font-info($font-header, 20px, 24px);
   text-transform: uppercase;
   color: $font-color-primary-alternate-accent;
 
@@ -10,7 +10,7 @@
 }
 
 .catalog-card__info {
-  @include font-info($font-secondary, 16px, 20px);
+  @include font-info($font-primary, 16px, 20px);
   text-transform: uppercase;
   color: $font-color-accent;
 
@@ -21,7 +21,7 @@
 }
 
 .catalog-card__description {
-  @include font-info($font-secondary, 16px, 18px);
+  @include font-info($font-primary, 16px, 18px);
 
   @include mobile {
     font-size: 12px;

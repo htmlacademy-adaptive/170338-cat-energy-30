@@ -10,7 +10,7 @@
 }
 
 .advantages__item-title {
-  @include font-info(inherit, 36px, 36px);
+  @include font-info($font-header, 36px, 36px);
   text-transform: uppercase;
 
   @include mobile {

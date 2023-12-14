@@ -10,31 +10,55 @@
   @include button-large;
   display: block;
   text-align: center;
-  background: $background-color-accent;
+  background: $button-color-primary;
   color: $font-color-alternate;
+
+  &:hover {
+    background: $button-color-primary-hover;
+  }
+
+  &:active {
+    color: rgba($font-color-alternate, 0.3);
+  }
 }
 
 .button--secondary {
   @include button-small;
   display: block;
   text-align: center;
-  background: $background-color-accent;
+  background: $button-color-primary;
   color: $font-color-alternate;
+
+  &:hover {
+    background: $button-color-primary-hover;
+  }
+
+  &:active {
+    color: rgba($font-color-alternate, 0.3);
+  }
 }
 
 .button--accent {
   @include button-small;
   display: block;
   text-align: center;
-  background: $background-color-alternate;
+  background: $button-color-alternate;
   color: $font-color-accent;
+
+  &:hover {
+    background: $font-color-accent;
+  }
 }
 
 .button--link {
   @include button-base;
-  @include font-info(inherit, 20px, 20px);
+  @include font-info($font-header, 20px, normal);
   display: inline-block;
   color: $font-color-primary;
+
+  &:active {
+    color: rgba($font-color-primary, 0.3);
+  }
 
   @include mobile {
     font-size: 16px;

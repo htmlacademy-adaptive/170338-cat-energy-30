@@ -10,7 +10,7 @@
 }
 
 .form__title {
-  @include font-info(inherit, 36px, 36px);
+  @include font-info($font-header, 36px, 36px);
 
   @include mobile {
     font-size: 24px;
@@ -19,7 +19,7 @@
 }
 
 .form__label {
-  @include font-info(inherit, 20px, 20px);
+  @include font-info($font-header, 20px, normal);
   text-transform: uppercase;
   color: $font-color-accent;
 
@@ -40,7 +40,7 @@
 }
 
 .form__requirements {
-  @include font-info($font-secondary, 16px, 16px);
+  @include font-info($font-primary, 16px, 16px);
 
   @include mobile {
     font-size: 14px;

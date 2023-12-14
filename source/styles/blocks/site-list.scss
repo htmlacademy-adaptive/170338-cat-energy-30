@@ -2,7 +2,6 @@
 @use "../global/mixins.scss";
 
 .site-list {
-  @include text-style-normal;
   @include list-base;
   font-family: inherit;
   text-transform: uppercase;

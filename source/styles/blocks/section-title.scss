@@ -2,8 +2,7 @@
 @use "../global/mixins.scss";
 
 .section-title {
-  @include text-style-normal;
-  font-family: $font-primary;
+  font-family: $font-header;
   font-size: 60px;
   line-height: 60px;
 

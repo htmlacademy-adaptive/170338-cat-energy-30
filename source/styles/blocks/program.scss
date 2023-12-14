@@ -2,7 +2,7 @@
 @use "../global/mixins.scss";
 
 .program__title {
-  @include font-info(inherit, 60px, 60px);
+  @include font-info($font-header, 60px, 60px);
 
   @include mobile {
     font-size: 36px;
@@ -11,7 +11,7 @@
 }
 
 .program__description {
-  @include font-info(inherit, 20px, 30px);
+  @include font-info($font-header, 20px, 30px);
   text-transform: uppercase;
 
   @include mobile {

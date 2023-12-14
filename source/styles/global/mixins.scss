@@ -34,14 +34,13 @@
 }
 
 @mixin font-info($font-family, $font-size, $line-height) {
-  @include text-style-normal;
   font-family: $font-family;
   font-size: $font-size;
   line-height: $line-height;
 }
 
 @mixin text-description {
-  @include font-info($font-secondary, 16px, 24px);
+  @include font-info($font-primary, 16px, 24px);
   color: $font-color-accent;
 
   @include mobile {
@@ -65,7 +64,7 @@
 }
 
 @mixin button-large {
-  @include font-info(inherit, 20px, 26px);
+  @include font-info($font-header, 20px, 26px);
   @include button-base;
   padding-top: 14px;
   padding-bottom: 14px;
@@ -77,7 +76,7 @@
 }
 
 @mixin button-small {
-  @include font-info(inherit, 16px, 20px);
+  @include font-info($font-header, 16px, 20px);
   @include button-base;
   padding-top: 10px;
   padding-bottom: 10px;

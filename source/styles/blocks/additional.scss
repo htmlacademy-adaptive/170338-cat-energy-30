@@ -2,7 +2,7 @@
 @use "../global/mixins.scss";
 
 .additional__title {
-  @include font-info(inherit, 36px, 36px);
+  @include font-info($font-header, 36px, 36px);
   text-transform: uppercase;
 
   @include mobile {
@@ -16,7 +16,7 @@
 }
 
 .additional__item-title {
-  @include font-info(inherit, 20px, 20px);
+  @include font-info($font-header, 20px, 20px);
   text-transform: uppercase;
   color: $font-color-primary-alternate-accent;
 
@@ -27,7 +27,7 @@
 }
 
 .additional__item-description {
-  @include font-info($font-secondary, 16px, 20px);
+  @include font-info($font-primary, 16px, 20px);
   color: $font-color-accent;
 
   @include mobile {
