@@ -21,4 +21,25 @@
 
 .site-list__link {
   text-decoration: none;
+  color: $font-color-primary;
+
+  &:hover {
+    color: rgba($font-color-primary, 0.6);
+  }
+
+  &:active {
+    color: rgba($font-color-primary, 0.3);
+  }
+
+  @include desktop {
+    color: $font-color-alternate;
+
+    &:hover {
+      color: rgba($font-color-alternate, 0.6);
+    }
+
+    &:active {
+      color: rgba($font-color-alternate, 0.3);
+    }
+  }
 }
