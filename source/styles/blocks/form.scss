@@ -5,8 +5,18 @@
   border: 0;
 }
 
+.form__radio {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  padding-left: 45px;
+}
+
 .form__group-list {
   @include list-base;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .form__title {
