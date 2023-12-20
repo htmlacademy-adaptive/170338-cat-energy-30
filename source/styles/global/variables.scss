@@ -1,6 +1,6 @@
 // Fonts
-$font-header: "Oswald", sans-serif;
-$font-primary: "Lato", sans-serif;
+$font-header: "Oswald", "Arial", sans-serif;
+$font-primary: "Lato", "Arial", sans-serif;
 
 // Colors
 //Background colors
@@ -15,12 +15,17 @@ $font-color-primary-alternate: #111111;
 $font-color-primary-alternate-accent: #222222;
 $font-color-alternate: #ffffff;
 $font-color-accent: #444444;
+$font-color-primary-alternate-accent-2: #3e3e3e;
+$font-color-primary-alternate-accent-3: #6b6b6b;
 
 //Button colors
 $button-color-primary: #68b738;
 $button-color-primary-hover: #5eaa2f;
 $button-color-alternate: #f2f2f2;
 $button-color-alternate-hover: #ebebeb;
+
+//Icons Color
+$icons-color-primary: #666666;
 
 //Input colors
 $input-color-border: #cdcdcd;

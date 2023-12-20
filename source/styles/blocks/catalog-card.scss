@@ -32,3 +32,13 @@
 .catalog-card__title--show-more {
   color: $font-color-primary-alternate;
 }
+
+.catalog-card__plus {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../images/icons/stack.svg#plus-icon");
+  background-size: 30px;
+}

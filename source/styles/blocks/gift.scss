@@ -1,10 +1,6 @@
 @use "../global/variables.scss";
 @use "../global/mixins.scss";
 
-.gift__description {
-  @include font-info($font-primary, 16px, 20px);
-}
-
 .gift {
   background-size: cover;
   background-repeat: no-repeat;
@@ -26,14 +22,14 @@
 
   @include mobile {
     min-height: 290px;
-    background-image: url(../images/gift-decoration@1x.jpg);
+    background-image: url("../images/gift-decoration@1x.jpg");
     background-image: image-set(
       "../images/gift-decoration@1x.webp" type("image/webp"),
       "../images/gift-decoration@1x.jpg" type("image/jpeg")
     );
 
     @media (min-resolution: 2dppx) {
-      background-image: url(../images/gift-decoration@2x.jpg);
+      background-image: url("../images/gift-decoration@2x.jpg");
       background-image: image-set(
         "../images/gift-decoration@2x.webp" type("image/webp"),
         "../images/gift-decoration@2x.jpg" type("image/jpeg")
@@ -43,14 +39,14 @@
 
   @include tablet {
     min-height: 200px;
-    background-image: url(../images/gift-decoration-tablet@1x.jpg);
+    background-image: url("../images/gift-decoration-tablet@1x.jpg");
     background-image: image-set(
       "../images/gift-decoration-tablet@1x.webp" type("image/webp"),
       "../images/gift-decoration-tablet@1x.jpg" type("image/jpeg")
     );
 
     @media (min-resolution: 2dppx) {
-      background-image: url(../images/gift-decoration-tablet@2x.jpg);
+      background-image: url("../images/gift-decoration-tablet@2x.jpg");
       background-image: image-set(
         "../images/ggift-decoration-tablet@2x.webp" type("image/webp"),
         "../images/gift-decoration-tablet@2x.jpg" type("image/jpeg")
@@ -60,18 +56,37 @@
 
   @include desktop {
     min-height: 288px;
-    background-image: url(../images/gift-decoration@1x.jpg);
+    background-image: url("../images/gift-decoration@1x.jpg");
     background-image: image-set(
       "../images/gift-decoration@1x.webp" type("image/webp"),
       "../images/gift-decoration@1x.jpg" type("image/jpeg")
     );
 
     @media (min-resolution: 2dppx) {
-      background-image: url(../images/gift-decoration@2x.jpg);
+      background-image: url("../images/gift-decoration@2x.jpg");
       background-image: image-set(
         "../images/gift-decoration@2x.webp" type("image/webp"),
         "../images/gift-decoration@2x.jpg" type("image/jpeg")
       );
     }
   }
+}
+
+.gift__description {
+  @include font-info($font-primary, 16px, 20px);
+  z-index: 1;
+}
+
+.gift__description::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 78px;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../../images/icons/stack.svg#gift-icon");
 }

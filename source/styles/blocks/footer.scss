@@ -5,7 +5,31 @@
   background-color: $background-color-alternate;
 }
 
-.footer__developer-title {
-  @include font-info($font-primary, 16px, 20px);
+.footer__logo-title {
+  color: $font-color-primary-alternate;
+
+  &:hover {
+    color: $font-color-primary-alternate-accent-2;
+  }
+
+  &:active {
+    color: $font-color-primary-alternate-accent-3;
+  }
+}
+
+.footer__developer-link {
+  @include font-info($font-primary, 16px, 18px);
+  display: flex;
+  align-items: center;
   color: $font-color-accent;
+  text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .footer__developer-icon,
+  &:active .footer__developer-icon {
+    color: $button-color-primary;
+  }
 }

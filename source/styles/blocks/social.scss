@@ -1,7 +1,23 @@
+@use "../global/variables.scss";
 @use "../global/mixins.scss";
 
 .social__list {
   @include list-base;
 
   display: flex;
+}
+
+.social__link {
+  display: block;
+  width: 28px;
+  height: 22px;
+  color: $icons-color-primary;
+
+  &:hover {
+    color: $button-color-primary;
+  }
+
+  &:active {
+    color: rgba($button-color-primary, 0.3);
+  }
 }
