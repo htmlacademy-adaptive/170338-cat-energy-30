@@ -9,11 +9,11 @@
   color: $font-color-primary-alternate;
 
   &:hover {
-    color: $font-color-primary-alternate-accent-2;
+    opacity: 0.8;
   }
 
   &:active {
-    color: $font-color-primary-alternate-accent-3;
+    opacity: 0.6;
   }
 }
 
@@ -28,8 +28,20 @@
     opacity: 0.3;
   }
 
-  &:hover .footer__developer-icon,
-  &:active .footer__developer-icon {
-    color: $button-color-primary;
+  &:hover .footer__developer-label::after,
+  &:active .footer__developer-label::after {
+    background-color: $button-color-primary;
   }
+}
+
+.footer__developer-label::after {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 34px;
+  color: $font-color-accent;
+  mask-image: url("../../images/icons/stack.svg#developer-icon");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: $font-color-accent;
 }

@@ -22,52 +22,52 @@
 
   @include mobile {
     min-height: 290px;
-    background-image: url("../images/gift-decoration@1x.jpg");
-    background-image: image-set(
-      "../images/gift-decoration@1x.webp" type("image/webp"),
-      "../images/gift-decoration@1x.jpg" type("image/jpeg")
-    );
+    background-image:
+      image-set(
+        "../images/gift-decoration@1x.webp" type("image/webp"),
+        "../images/gift-decoration@1x.jpg" type("image/jpeg")
+      );
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../images/gift-decoration@2x.jpg");
-      background-image: image-set(
-        "../images/gift-decoration@2x.webp" type("image/webp"),
-        "../images/gift-decoration@2x.jpg" type("image/jpeg")
-      );
+      background-image:
+        image-set(
+          "../images/gift-decoration@2x.webp" type("image/webp"),
+          "../images/gift-decoration@2x.jpg" type("image/jpeg")
+        );
     }
   }
 
   @include tablet {
     min-height: 200px;
-    background-image: url("../images/gift-decoration-tablet@1x.jpg");
-    background-image: image-set(
-      "../images/gift-decoration-tablet@1x.webp" type("image/webp"),
-      "../images/gift-decoration-tablet@1x.jpg" type("image/jpeg")
-    );
+    background-image:
+      image-set(
+        "../images/gift-decoration-tablet@1x.webp" type("image/webp"),
+        "../images/gift-decoration-tablet@1x.jpg" type("image/jpeg")
+      );
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../images/gift-decoration-tablet@2x.jpg");
-      background-image: image-set(
-        "../images/ggift-decoration-tablet@2x.webp" type("image/webp"),
-        "../images/gift-decoration-tablet@2x.jpg" type("image/jpeg")
-      );
+      background-image:
+        image-set(
+          "../images/ggift-decoration-tablet@2x.webp" type("image/webp"),
+          "../images/gift-decoration-tablet@2x.jpg" type("image/jpeg")
+        );
     }
   }
 
   @include desktop {
     min-height: 288px;
-    background-image: url("../images/gift-decoration@1x.jpg");
-    background-image: image-set(
-      "../images/gift-decoration@1x.webp" type("image/webp"),
-      "../images/gift-decoration@1x.jpg" type("image/jpeg")
-    );
+    background-image:
+      image-set(
+        "../images/gift-decoration@1x.webp" type("image/webp"),
+        "../images/gift-decoration@1x.jpg" type("image/jpeg")
+      );
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../images/gift-decoration@2x.jpg");
-      background-image: image-set(
-        "../images/gift-decoration@2x.webp" type("image/webp"),
-        "../images/gift-decoration@2x.jpg" type("image/jpeg")
-      );
+      background-image:
+        image-set(
+          "../images/gift-decoration@2x.webp" type("image/webp"),
+          "../images/gift-decoration@2x.jpg" type("image/jpeg")
+        );
     }
   }
 }

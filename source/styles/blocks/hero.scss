@@ -33,19 +33,19 @@
     top: 0;
     left: 0;
     right: 0;
-    background-image: url("../images/hero-decoration@1x.jpg");
-    background-image: image-set(
-      "../images/hero-decoration-mobile@1x.webp" type("image/webp"),
-      "../images/hero-decoration-mobile@1x.jpg" type("image/jpeg")
-    );
+    background-image:
+      image-set(
+        "../images/hero-decoration-mobile@1x.webp" type("image/webp"),
+        "../images/hero-decoration-mobile@1x.jpg" type("image/jpeg")
+      );
     background-position: center;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../images/hero-decoration@2x.jpg");
-      background-image: image-set(
-        "../images/hero-decoration-mobile@2x.webp" type("image/webp"),
-        "../images/hero-decoration-mobile@2x.jpg" type("image/jpeg")
-      );
+      background-image:
+        image-set(
+          "../images/hero-decoration-mobile@2x.webp" type("image/webp"),
+          "../images/hero-decoration-mobile@2x.jpg" type("image/jpeg")
+        );
     }
   }
 
@@ -61,19 +61,19 @@
     left: 50%;
     width: 50%;
     height: 694px;
-    background-image: url("../images/hero-decoration@1x.jpg");
-    background-image: image-set(
-      "../images/hero-decoration-desktop@1x.webp" type("image/webp"),
-      "../images/hero-decoration-desktop@1x.jpg" type("image/jpeg")
-    );
+    background-image:
+      image-set(
+        "../images/hero-decoration-desktop@1x.webp" type("image/webp"),
+        "../images/hero-decoration-desktop@1x.jpg" type("image/jpeg")
+      );
     background-position: right;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../images/hero-decoration@2x.jpg");
-      background-image: image-set(
-        "../images/hero-decoration-desktop@2x.webp" type("image/webp"),
-        "../images/hero-decoration-desktop@2x.jpg" type("image/jpeg")
-      );
+      background-image:
+        image-set(
+          "../images/hero-decoration-desktop@2x.webp" type("image/webp"),
+          "../images/hero-decoration-desktop@2x.jpg" type("image/jpeg")
+        );
     }
   }
 }
