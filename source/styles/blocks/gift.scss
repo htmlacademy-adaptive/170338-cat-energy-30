@@ -1,6 +1,92 @@
 @use "../global/variables.scss";
 @use "../global/mixins.scss";
 
+.gift {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $background-color-accent;
+  background-position: center;
+  position: relative;
+  color: $background-color-primary;
+  display: flex;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($background-color-accent, 0.85);
+  }
+
+  @include mobile {
+    min-height: 290px;
+    background-image:
+      image-set(
+        "../images/gift-decoration@1x.webp" type("image/webp"),
+        "../images/gift-decoration@1x.jpg" type("image/jpeg")
+      );
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        image-set(
+          "../images/gift-decoration@2x.webp" type("image/webp"),
+          "../images/gift-decoration@2x.jpg" type("image/jpeg")
+        );
+    }
+  }
+
+  @include tablet {
+    min-height: 200px;
+    background-image:
+      image-set(
+        "../images/gift-decoration-tablet@1x.webp" type("image/webp"),
+        "../images/gift-decoration-tablet@1x.jpg" type("image/jpeg")
+      );
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        image-set(
+          "../images/ggift-decoration-tablet@2x.webp" type("image/webp"),
+          "../images/gift-decoration-tablet@2x.jpg" type("image/jpeg")
+        );
+    }
+  }
+
+  @include desktop {
+    min-height: 288px;
+    background-image:
+      image-set(
+        "../images/gift-decoration@1x.webp" type("image/webp"),
+        "../images/gift-decoration@1x.jpg" type("image/jpeg")
+      );
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        image-set(
+          "../images/gift-decoration@2x.webp" type("image/webp"),
+          "../images/gift-decoration@2x.jpg" type("image/jpeg")
+        );
+    }
+  }
+}
+
 .gift__description {
   @include font-info($font-primary, 16px, 20px);
+  z-index: 1;
+}
+
+.gift__description::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 78px;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../../images/icons/stack.svg#gift-icon");
 }

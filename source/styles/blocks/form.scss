@@ -5,8 +5,18 @@
   border: 0;
 }
 
+.form__radio {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  padding-left: 45px;
+}
+
 .form__group-list {
   @include list-base;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .form__title {
@@ -45,4 +55,43 @@
     font-size: 16px;
     line-height: 16px;
   }
+}
+
+.form__input-with-icon {
+  position: relative;
+}
+
+.form__input-icon {
+  position: absolute;
+  background-color: $font-color-primary;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+
+  @include mobile {
+    right: 12px;
+  }
+
+  @include tablet {
+    right: 14px;
+  }
+
+  @include desktop {
+    right: 16px;
+  }
+}
+
+.form__input-icon--tel {
+  mask-image: url("../../images/icons/stack.svg#phone-icon");
+  mask-repeat: no-repeat;
+}
+
+.form__input-icon--email {
+  mask-image: url("../../images/icons/stack.svg#email-icon");
+  mask-repeat: no-repeat;
+}
+
+.form__control-input:focus ~ .form__input-icon {
+  background-color: $button-color-primary;
 }

@@ -6,10 +6,49 @@
   text-transform: uppercase;
   color: $font-color-accent;
   padding: 14px 15px;
+  width: 100%;
 
   @include tablet {
     font-size: 20px;
     line-height: 20px;
     padding: 11px 20px;
+  }
+}
+
+.input--radio {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  aspect-ratio: 1;
+  width: 30px;
+  border: 1px solid $input-color-border;
+  border-radius: 50%;
+
+  @include tablet {
+    width: 40px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 13px;
+    aspect-ratio: 1;
+    background-color: $button-color-primary;
+    border-radius: 50%;
+    display: none;
+
+    @include tablet {
+      width: 18px;
+    }
+  }
+
+  .form__control-input:checked + &::before {
+    display: block;
   }
 }

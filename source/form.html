@@ -18,9 +18,9 @@
   <header class="header">
     <a class="header__logo" href="index.html">
       <picture>
-        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/company-logo-desktop.svg">
-        <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/company-logo-tablet.svg">
-        <img class="header__logo-image" src="images/company-logo-mobile.svg" width="33" height="38" alt="Логотип «Кэт энерджи».">
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="60" height="50">
+        <img class="header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип «Кэт энерджи».">
       </picture>
       <img class="header__logo-title" src="images/logo-title.svg" width="101" height="18" alt="Cat Energy.">
     </a>
@@ -59,18 +59,18 @@
             <legend class="visually-hidden">Базовая информация о коте</legend>
             <div class="form__group-wrapper">
               <label class="form__label" for="program-form-name">Имя:*</label>
-              <input class="form__control-input input" type="text" id="program-form-name" name="program-form-name" placeholder="Барсик"
+              <input class="form__control-input input" type="text" id="program-form-name" name="program-form-name" placeholder="Имя кота" value="Барсик"
                 required>
             </div>
             <div class="form__group-wrapper">
               <label class="form__label" for="program-form-weight">Вес (кг):*</label>
               <input class="form__control-input input input--numeric" type="number" id="program-form-weight" name="program-form-weight"
-                placeholder="7" min="0" required>
+                placeholder="Вес кота" min="0" value="7" required>
             </div>
             <div class="form__group-wrapper">
               <label class="form__label" for="program-form-age">Возраст (лет):</label>
               <input class="form__control-input input input--numeric" type="number" id="program-form-age" name="program-form-age"
-                placeholder="7" min="0">
+                placeholder="Возраст кота" min="0" value="7">
             </div>
           </fieldset>
           <fieldset class="form__group form__group--program">
@@ -78,19 +78,22 @@
             <ul class="form__group-list">
               <li class="form__group-item">
                 <label class="form__radio">
-                  <input class="form__control-input" type="radio" name="program-form-goal" value="weight_loss" checked>
+                  <input class="form__control-input visually-hidden" type="radio" name="program-form-goal" value="weight_loss" checked>
+                  <span class="input input--radio"></span>
                   <span class="form__label">Похудение</span>
                 </label>
               </li>
               <li class="form__group-item">
                 <label class="form__radio">
-                  <input class="form__control-input" type="radio" name="program-form-goal" value="weight_gain">
+                  <input class="form__control-input visually-hidden" type="radio" name="program-form-goal" value="weight_gain">
+                  <span class="input input--radio"></span>
                   <span class="form__label">Набор массы</span>
                 </label>
               </li>
               <li class="form__group-item">
                 <label class="form__radio">
-                  <input class="form__control-input" type="radio" name="program-form-goal" value="I_dont_know">
+                  <input class="form__control-input visually-hidden" type="radio" name="program-form-goal" value="I_dont_know">
+                  <span class="input input--radio"></span>
                   <span class="form__label">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
@@ -100,13 +103,19 @@
             <legend class="form__title">Контактные данные (владельца кота)</legend>
             <div class="form__group-wrapper">
               <label class="form__label" for="program-form-email">E-mail:*</label>
-              <input class="form__control-input input input--email" type="email" id="program-form-email" name="program-form-email"
-                placeholder="kuklachev@gmail.com" required>
+              <div class="form__input-with-icon">
+                <input class="form__control-input input" type="email" id="program-form-email" name="program-form-email"
+                  placeholder="kuklachev@gmail.com" required>
+                  <span class="form__input-icon form__input-icon--email"></span>
+              </div>
             </div>
             <div class="form__group-wrapper">
               <label class="form__label" for="program-form-phone">Телефон:*</label>
-              <input class="form__control-input input input--tel" type="tel" id="program-form-phone" name="program-form-phone"
-                placeholder="8 (960) 900-60-90" required>
+              <div class="form__input-with-icon">
+                <input class="form__control-input input" type="tel" id="program-form-phone" name="program-form-phone"
+                  placeholder="8 (960) 900-60-90" required>
+                  <span class="form__input-icon form__input-icon--tel"></span>
+              </div>
             </div>
           </fieldset>
           <fieldset class="form__group form__group--comments">
@@ -172,31 +181,31 @@
   <footer class="footer">
     <div class="footer__wrapper">
       <a class="footer__logo" href="#">
-        <img class="footer__logo-title" src="images/footer-logo-title.svg" width="128" height="24" alt="Cat Energy.">
+        <img class="footer__logo-title" src="images/logo-footer.svg" width="128" height="24" alt="Cat Energy.">
       </a>
       <div class="footer__social social">
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Мы в Вконтакте</span>
+              <span class="visually-hidden">Мы в Вконтакте.</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Мы в Ютубе</span>
+              <span class="visually-hidden">Мы в Ютубе.</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Мы в Телеграме</span>
+              <span class="visually-hidden">Мы в Телеграме.</span>
             </a>
           </li>
         </ul>
       </div>
       <div class="footer__developer">
-        <p class="footer__developer-title">HTML Academy</p>
-        <img class="footer__developer-logo" src="images/developer-logo.svg" width="27" height="34"
-          alt="Логотип компании Html Academy.">
+        <a class="footer__developer-link" href="#">
+          <span class="footer__developer-label">HTML Academy</span>
+        </a>
       </div>
     </div>
   </footer>

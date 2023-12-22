@@ -9,3 +9,71 @@
     line-height: 60px;
   }
 }
+
+.hero__decoration {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $background-color-accent;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($background-color-accent, 0.85);
+  }
+
+  @include mobile {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 302px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image:
+      image-set(
+        "../images/hero-decoration-mobile@1x.webp" type("image/webp"),
+        "../images/hero-decoration-mobile@1x.jpg" type("image/jpeg")
+      );
+    background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        image-set(
+          "../images/hero-decoration-mobile@2x.webp" type("image/webp"),
+          "../images/hero-decoration-mobile@2x.jpg" type("image/jpeg")
+        );
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 694px;
+    background-image:
+      image-set(
+        "../images/hero-decoration-desktop@1x.webp" type("image/webp"),
+        "../images/hero-decoration-desktop@1x.jpg" type("image/jpeg")
+      );
+    background-position: right;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        image-set(
+          "../images/hero-decoration-desktop@2x.webp" type("image/webp"),
+          "../images/hero-decoration-desktop@2x.jpg" type("image/jpeg")
+        );
+    }
+  }
+}

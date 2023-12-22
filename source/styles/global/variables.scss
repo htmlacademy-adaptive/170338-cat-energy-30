@@ -1,6 +1,6 @@
 // Fonts
-$font-header: "Oswald", sans-serif;
-$font-primary: "Lato", sans-serif;
+$font-header: "Oswald", "Arial", sans-serif;
+$font-primary: "Lato", "Arial", sans-serif;
 
 // Colors
 //Background colors
@@ -21,6 +21,12 @@ $button-color-primary: #68b738;
 $button-color-primary-hover: #5eaa2f;
 $button-color-alternate: #f2f2f2;
 $button-color-alternate-hover: #ebebeb;
+
+//Icons Color
+$icons-color-primary: #666666;
+
+//Input colors
+$input-color-border: #cdcdcd;
 
 // View Port Size
 $view-port-desktop: 1440px;

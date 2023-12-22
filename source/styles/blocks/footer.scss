@@ -1,7 +1,47 @@
 @use "../global/variables.scss";
 @use "../global/mixins.scss";
 
-.footer__developer-title {
-  @include font-info($font-primary, 16px, 20px);
+.footer {
+  background-color: $background-color-alternate;
+}
+
+.footer__logo-title {
+  color: $font-color-primary-alternate;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.footer__developer-link {
+  @include font-info($font-primary, 16px, 18px);
+  display: flex;
+  align-items: center;
   color: $font-color-accent;
+  text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .footer__developer-label::after,
+  &:active .footer__developer-label::after {
+    background-color: $button-color-primary;
+  }
+}
+
+.footer__developer-label::after {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 34px;
+  color: $font-color-accent;
+  mask-image: url("../../images/icons/stack.svg#developer-icon");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: $font-color-accent;
 }
