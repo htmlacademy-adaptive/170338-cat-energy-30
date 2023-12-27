@@ -1,5 +1,46 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
+.header {
+  background-color: $background-color-primary;
+
+  @include mobile {
+    min-height: 65px;
+  }
+
+  @include desktop {
+    background-color: $background-color-transparent;
+  }
+}
+
+.header__container {
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 39px;
+    align-items: center;
+  }
+}
+
+.header__container--accent {
+  @include mobile {
+    border-bottom: 1px solid $border-color-primary;
+  }
+}
+
 .header__logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   text-decoration: none;
+  cursor: pointer;
+
+  @include mobile {
+    padding-top: 13px;
+    padding-bottom: 12px;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -7,5 +48,30 @@
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+.header__logo-title {
+  display: block;
+
+  @include mobile {
+    position: absolute;
+    margin: 0 auto;
+    min-width: 101px;
+    height: auto;
+    right: 0;
+    left: 0;
+    top: 23px;
+  }
+
+  @include tablet {
+    margin-left: 13px;
+    min-width: 101px;
+    height: auto;
+  }
+
+  @include desktop {
+    margin-left: 14px;
+    min-width: 118px;
   }
 }

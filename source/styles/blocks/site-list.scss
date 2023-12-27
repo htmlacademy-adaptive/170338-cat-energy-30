@@ -7,6 +7,7 @@
   font-family: inherit;
   text-transform: uppercase;
   display: flex;
+  flex-wrap: wrap;
 
   @include tablet {
     font-size: 18px;
@@ -19,9 +20,44 @@
   }
 }
 
+.site-list__item {
+  @include mobile {
+    &:first-child .site-list__link {
+      border-top: 1px solid $border-color-alternate;
+    }
+  }
+}
+
+.site-list__item--active .site-list__link::before {
+  @include tablet {
+    content: "";
+    position: absolute;
+    background-color: $background-color-accent;
+    height: 2px;
+    bottom: 2px;
+    left: 17px;
+    right: 17px;
+  }
+
+  @include desktop {
+    background-color: $background-color-primary;
+  }
+}
+
 .site-list__link {
+  text-align: center;
+  text-transform: uppercase;
   text-decoration: none;
   color: $font-color-primary;
+  position: relative;
+
+  @include mobile {
+    display: block;
+    background-color: $background-color-primary;
+    color: $font-color-primary;
+    padding: 22px 20px 23px;
+    border-bottom: 1px solid $border-color-alternate;
+  }
 
   &:hover {
     color: rgba($font-color-primary, 0.6);
@@ -29,6 +65,10 @@
 
   &:active {
     color: rgba($font-color-primary, 0.3);
+  }
+
+  @include tablet {
+    padding: 12px 17px 12px 17px;
   }
 
   @include desktop {

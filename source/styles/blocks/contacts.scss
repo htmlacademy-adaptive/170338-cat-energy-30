@@ -1,14 +1,36 @@
 @use "../global/variables.scss";
 @use "../global/mixins.scss";
 
+.contacts__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
+  @include mobile {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin: 0 auto;
+  }
+
+  @include tablet {
+    padding: 56px 40px 62px;
+  }
+}
+
 .contacts__title {
   @include font-info($font-header, 16px, 20px);
+
+  text-transform: uppercase;
+  margin: 0;
   color: $font-color-primary-alternate;
 
   @include tablet {
     font-size: 20px;
     line-height: 26px;
   }
+}
+
+.contacts__address-description {
+  margin: 0;
 }
 
 .contacts__address {
@@ -23,3 +45,11 @@
 .contacts__wrapper--alternate {
   background-color: $background-color-alternate;
 }
+
+.contacts__address-map {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
