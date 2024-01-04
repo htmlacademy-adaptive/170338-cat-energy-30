@@ -2,7 +2,6 @@
 @use "../global/mixins.scss";
 
 .hero {
-
   @include mobile {
     position: relative;
   }
@@ -87,7 +86,7 @@
     margin: 0;
     top: 143px;
     left: 50%;
-    transform: translateX(-30%) translatex(2px);
+    transform: translateX(-30%) translateX(2px);
   }
 }
 

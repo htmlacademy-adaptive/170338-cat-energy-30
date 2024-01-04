@@ -14,6 +14,11 @@
 }
 
 .header__container {
+  @include mobile {
+    position: relative;
+    z-index: 3;
+    border-bottom: 1px solid #ebebeb;
+  }
 
   @include tablet {
     display: flex;

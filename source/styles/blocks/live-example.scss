@@ -9,12 +9,12 @@
 
   @include tablet {
     background-color: $background-color-primary;
-    background-image: linear-gradient($background-color-transparent 0 619px,  $background-color-alternate-accent 619px 100%);
+    background-image: linear-gradient($background-color-transparent 0 619px, $background-color-alternate-accent 619px 100%);
   }
 
   @include desktop {
     background-color: $background-color-primary;
-    background-image: linear-gradient($background-color-transparent 0 136px,  $background-color-alternate-accent 136px 100%);
+    background-image: linear-gradient($background-color-transparent 0 136px, $background-color-alternate-accent 136px 100%);
   }
 }
 
@@ -161,7 +161,6 @@
 }
 
 .live-example__slider {
-
   @include tablet {
     grid-column: 1/-1;
   }

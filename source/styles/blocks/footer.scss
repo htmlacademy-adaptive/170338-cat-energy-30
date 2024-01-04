@@ -6,7 +6,6 @@
 }
 
 .footer__container {
-
   @include mobile {
     display: flex;
     padding-top: 40px;
@@ -18,13 +17,12 @@
     padding-top: 57px;
     padding-bottom: 57px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
   }
 }
 
 .footer__logo {
-
   @include mobile {
     align-self: center;
     padding-bottom: 32px;
@@ -44,7 +42,6 @@
 }
 
 .footer__social {
-
   @include mobile {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -76,17 +73,21 @@
     opacity: 0.3;
   }
 
-  &:hover .footer__developer-label::after,
-  &:active .footer__developer-label::after {
+  &:hover::after,
+  &:active::after {
     background-color: $button-color-primary;
   }
 
+  @include mobile {
+    justify-content: space-between;
+  }
+
   @include tablet {
-    margin-right: 50px;
+    gap: 50px;
   }
 }
 
-.footer__developer-label::after {
+.footer__developer-link::after {
   content: "";
   display: inline-block;
   width: 27px;
@@ -96,9 +97,4 @@
   mask-position: center;
   mask-repeat: no-repeat;
   background-color: $font-color-accent;
-
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }

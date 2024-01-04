@@ -16,42 +16,44 @@
 
 <body class="page__body">
   <header class="header">
-    <a class="header__logo" href="index.html">
-      <picture>
-        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59">
-        <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="60" height="50">
-        <img class="header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип «Кэт энерджи».">
-      </picture>
-      <img class="header__logo-title" src="images/logo-title.svg" width="101" height="18" alt="Cat Energy.">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle main-nav__toggle--closed" type="button">
-        <span class="visually-hidden">Открыть меню.</span>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">
-              Каталог продукции
-            </a>
-          </li>
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link" href="form.html">
-              Подбор программы
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="header__container page__container">
+      <a class="header__logo" href="index.html">
+        <picture>
+          <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59">
+          <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="60" height="50">
+          <img class="header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип «Кэт энерджи».">
+        </picture>
+        <img class="header__logo-title" src="images/logo-title.svg" width="101" height="18" alt="Cat Energy.">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle main-nav__toggle--closed" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__link" href="form.html">
+                Подбор программы
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
   <main class="main-container">
     <section class="program">
-      <div class="program__wrapper">
+      <div class="page__container program__container">
         <h1 class="program__title">Подбор программы</h1>
         <p class="program__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="program__form form" id="program-form" action="https://echo.htmlacademy.ru/" method="get">
@@ -75,7 +77,7 @@
           </fieldset>
           <fieldset class="form__group form__group--program">
             <legend class="visually-hidden">Тип программы</legend>
-            <ul class="form__group-list">
+            <ul class="form__group-list form__group-list--program">
               <li class="form__group-item">
                 <label class="form__radio">
                   <input class="form__control-input visually-hidden" type="radio" name="program-form-goal" value="weight_loss" checked>
@@ -100,54 +102,58 @@
             </ul>
           </fieldset>
           <fieldset class="form__group form__group--contacts">
-            <legend class="form__title">Контактные данные (владельца кота)</legend>
+            <legend class="form__title form__title--contacts">Контактные данные (владельца кота)</legend>
             <div class="form__group-wrapper">
               <label class="form__label" for="program-form-email">E-mail:*</label>
               <div class="form__input-with-icon">
-                <input class="form__control-input input" type="email" id="program-form-email" name="program-form-email"
-                  placeholder="kuklachev@gmail.com" required>
+                <input class="form__control-input input input--with-icon" type="email" id="program-form-email" name="program-form-email"
+                value="kuklachev@gmail.com" placeholder="Ваша электронная почта" required>
                   <span class="form__input-icon form__input-icon--email"></span>
               </div>
             </div>
             <div class="form__group-wrapper">
               <label class="form__label" for="program-form-phone">Телефон:*</label>
               <div class="form__input-with-icon">
-                <input class="form__control-input input" type="tel" id="program-form-phone" name="program-form-phone"
-                  placeholder="8 (960) 900-60-90" required>
+                <input class="form__control-input input input--with-icon" type="tel" id="program-form-phone" name="program-form-phone"
+                  value="8 (960) 900-60-90" placeholder="Ваш номер телефона" required>
                   <span class="form__input-icon form__input-icon--tel"></span>
               </div>
             </div>
           </fieldset>
           <fieldset class="form__group form__group--comments">
-            <legend class="form__title">Комментарий</legend>
+            <legend class="form__title form__title--comments">Комментарий</legend>
             <label for="program-form-comments"><span class="visually-hidden">Дополнительная информация о коте</span></label>
             <textarea class="form__control-textarea input" rows="5" id="program-form-comments" name="program-form-comments"
               placeholder="Расскажите обо всех повадках кота" autocomplete="off"></textarea>
           </fieldset>
-          <fieldset class="form__group form__group--comments">
-            <legend class="form__title">Дополнительно</legend>
-            <ul class="form__group-list">
+          <fieldset class="form__group form__group--additional">
+            <legend class="form__title form__title--additional">Дополнительно</legend>
+            <ul class="form__group-list form__group-list--additional">
               <li class="form__group-item">
                 <label class="form__checkbox">
-                  <input class="form__control-input input visually-hidden" type="checkbox" name="program-form-sweetener">
+                  <input class="form__control-input input visually-hidden" type="checkbox" name="program-form-sweetener" checked>
+                  <span class="input input--mark"></span>
                   <span class="form__label">Cахарозаменитель</span>
                 </label>
               </li>
               <li class="form__group-item">
                 <label class="form__checkbox">
                   <input class="form__control-input input visually-hidden" type="checkbox" name="program-form-water">
+                  <span class="input input--mark"></span>
                   <span class="form__label">Питьевая вода</span>
                 </label>
               </li>
               <li class="form__group-item">
                 <label class="form__checkbox">
                   <input class="form__control-input input visually-hidden" type="checkbox" name="program-form-milk">
+                  <span class="input input--mark"></span>
                   <span class="form__label">Молоко</span>
                 </label>
               </li>
               <li class="form__group-item">
                 <label class="form__checkbox">
                   <input class="form__control-input input visually-hidden" type="checkbox" name="program-form-vitamins">
+                  <span class="input input--mark"></span>
                   <span class="form__label">Витамины</span>
                 </label>
               </li>
@@ -160,9 +166,9 @@
         </form>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts contacts--alternate">
       <div class="page__container">
-        <div class="contacts__wrapper contacts__wrapper--alternate">
+        <div class="contacts__container contacts__container--alternate">
           <h2 class="visually-hidden">Контакты.</h2>
           <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
           <address class="contacts__address">

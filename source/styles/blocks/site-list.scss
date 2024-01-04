@@ -38,7 +38,9 @@
     left: 17px;
     right: 17px;
   }
+}
 
+.site-list__item--active-alternate .site-list__link::before {
   @include desktop {
     background-color: $background-color-primary;
   }
@@ -70,7 +72,9 @@
   @include tablet {
     padding: 12px 17px 12px 17px;
   }
+}
 
+.site-list__link--alternate {
   @include desktop {
     color: $font-color-alternate;
 

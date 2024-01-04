@@ -13,7 +13,7 @@
     position: absolute;
     bottom: 0;
     height: 1px;
-    width: 110%;
+    width: 100%;
     background-color: $border-color-alternate;
   }
 
@@ -35,7 +35,7 @@
   }
 
   @include desktop {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 95px;
   }
 }
@@ -82,17 +82,17 @@
 }
 
 .how-it-work__item::after {
-    @include tablet {
-      @include font-info($font-header, 280px, 280px);
-      counter-increment: how-it-work-counter;
-      content: counter(how-it-work-counter);
-      color: $background-color-alternate;
-      position: absolute;
-      min-width: 134px;
-      right: 0;
-      top: 0;
-      z-index: -1;
-    }
+  @include tablet {
+    @include font-info($font-header, 280px, 280px);
+    counter-increment: how-it-work-counter;
+    content: counter(how-it-work-counter);
+    color: $background-color-alternate;
+    position: absolute;
+    min-width: 134px;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
 }
 
 .how-it-work__item--leaf::before {

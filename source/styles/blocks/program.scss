@@ -1,12 +1,45 @@
 @use "../global/variables.scss";
 @use "../global/mixins.scss";
 
+.program {
+  overflow-x: hidden;
+}
+
+.program__container {
+  @include mobile {
+    padding-top: 28px;
+    padding-bottom: 32px;
+  }
+
+  @include tablet {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+
+  @include desktop {
+    padding-top: 40px;
+    padding-bottom: 82px;
+  }
+}
+
 .program__title {
   @include font-info($font-header, 36px, 36px);
+  margin: 0;
+
+  @include mobile {
+    margin-bottom: 38px;
+  }
 
   @include tablet {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 54px;
+    margin-left: 40px;
+  }
+
+  @include desktop {
+    margin-bottom: 56px;
+    margin-left: 0;
   }
 }
 
@@ -14,8 +47,20 @@
   @include font-info($font-header, 14px, 18px);
   text-transform: uppercase;
 
+  @include mobile {
+    margin-bottom: 40px;
+    max-width: 226px;
+  }
+
   @include tablet {
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 66px;
+    max-width: 324px;
+    margin-left: 40px;
+  }
+
+  @include desktop {
+    margin-left: 0;
   }
 }
