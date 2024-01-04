@@ -1,3 +1,104 @@
+@use "../global/variables.scss";
+@use "../global/mixins.scss";
+
 .main-nav {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.main-nav__toggle {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  background-color: $background-color-transparent;
+  color: $font-color-primary;
+  border: none;
+  right: 0;
+  top: 0;
+  margin-top: 23px;
+  margin-right: 20px;
+  width: 24px;
+  height: 16px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.main-nav__toggle--closed::before {
+  content: "";
+  position: absolute;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 2px;
+  background-color: $font-color-primary;
+  box-shadow:
+    0 7px 0 0 $font-color-primary,
+    0 -7px 0 0 $font-color-primary;
+}
+
+.main-nav__toggle--opened::before,
+.main-nav__toggle--opened::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: $font-color-primary;
+}
+
+.main-nav__toggle--opened::after {
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.main-nav__toggle--opened::before {
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.main-nav__wrapper {
+  @include mobile {
+    width: 100%;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+  }
+
+  @include tablet {
+    position: relative;
+  }
+}
+
+.main-nav__toggle--closed ~ .main-nav__wrapper {
+  @include mobile {
+    visibility: hidden;
+  }
+}
+
+
+.main-nav__toggle--opened ~ .main-nav__wrapper {
+  @include mobile {
+    visibility: visible;
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  @include tablet {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-end;
+  }
 }

@@ -1,15 +1,37 @@
 @use "../global/variables.scss";
 @use "../global/mixins.scss";
 
+.catalog__container {
+  @include mobile {
+    padding-top: 27px;
+  }
+
+  @include tablet {
+    padding-top: 65px;
+  }
+}
+
 .catalog__title {
   @include font-info($font-header, 36px, 36px);
+  margin: 0;
+
+  @include mobile {
+    margin-bottom: 41px;
+  }
 
   @include tablet {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 64px;
   }
 }
 
 .catalog__list {
   @include list-base;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    gap: 60px;
+  }
 }

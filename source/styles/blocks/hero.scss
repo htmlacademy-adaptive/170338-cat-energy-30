@@ -1,12 +1,108 @@
 @use "../global/variables.scss";
 @use "../global/mixins.scss";
 
+.hero {
+  @include mobile {
+    position: relative;
+  }
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+
+  @include mobile {
+    padding-bottom: 20px;
+  }
+
+  @include tablet {
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 65px;
+  }
+
+  @include desktop {
+    min-height: 596px;
+    margin-bottom: 82px;
+  }
+}
+
 .hero__title {
   @include font-info($font-header, 36px, 36px);
+
+  @include mobile {
+    color: $font-color-alternate;
+    text-align: center;
+    margin-bottom: 25px;
+  }
 
   @include tablet {
     font-size: 60px;
     line-height: 60px;
+    max-width: 420px;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.hero__description {
+  @include font-info($font-header, 14px, 14px);
+  text-transform: uppercase;
+
+  @include mobile {
+    color: $font-color-alternate;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 29px;
+  }
+
+  @include tablet {
+    @include font-info($font-header, 20px, 20px);
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  @include desktop {
+    margin-bottom: 52px;
+  }
+}
+
+.hero__image {
+  display: block;
+
+  @include mobile {
+    min-width: 280px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @include tablet {
+    margin-top: -82px;
+    margin-left: -90px;
+  }
+
+  @include desktop {
+    position: absolute;
+    margin: 0;
+    top: 143px;
+    left: 50%;
+    transform: translateX(-30%) translateX(2px);
+  }
+}
+
+.hero__button {
+  @include font-info($font-header, 16px, 20px);
+
+  @include mobile {
+    order: 3;
+  }
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 26px;
+    z-index: 1;
+    min-width: 244px;
+    margin: 0 auto 0 0;
   }
 }
 

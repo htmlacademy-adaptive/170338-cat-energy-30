@@ -8,6 +8,12 @@ $background-color-primary: #ffffff;
 $background-color-accent: #68b738;
 $background-color-alternate: #f2f2f2;
 $background-color-alternate-accent: #eaeaea;
+$background-color-transparent: rgba(#ffffff, 0);
+
+//Border Colors
+$border-color-primary: #ebebeb;
+$border-color-secondary: #d9d9d9;
+$border-color-alternate: #e6e6e6;
 
 //Font colors
 $font-color-primary: #000000;
@@ -24,9 +30,11 @@ $button-color-alternate-hover: #ebebeb;
 
 //Icons Color
 $icons-color-primary: #666666;
+$icons-color-secondary: #d3d3d3;
 
 //Input colors
 $input-color-border: #cdcdcd;
+$input-color-border-alternate: #e7e7e7;
 
 // View Port Size
 $view-port-desktop: 1440px;

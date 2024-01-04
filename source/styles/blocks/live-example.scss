@@ -1,25 +1,132 @@
 @use "../global/variables.scss";
 @use "../global/mixins.scss";
 
-.live-example__wrapper {
-  background-color: $background-color-alternate-accent;
+.live-example {
+  @include mobile {
+    padding-top: 25px;
+    background-color: $background-color-alternate-accent;
+  }
+
+  @include tablet {
+    background-color: $background-color-primary;
+    background-image: linear-gradient($background-color-transparent 0 619px, $background-color-alternate-accent 619px 100%);
+  }
+
+  @include desktop {
+    background-color: $background-color-primary;
+    background-image: linear-gradient($background-color-transparent 0 136px, $background-color-alternate-accent 136px 100%);
+  }
+}
+
+.live-example__container {
+  display: grid;
+
+  @include tablet {
+    grid-template-columns: 2fr 1fr;
+    row-gap: 20px;
+    column-gap: 30px;
+    padding-top: 43px;
+    padding-bottom: 101px;
+  }
+
+  @include desktop {
+    grid-template-columns: auto 560px;
+    column-gap: 224px;
+    padding-top: 0;
+    padding-bottom: 75px;
+  }
+}
+
+.live-example__title {
+  margin: 0;
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
+
+  @include tablet {
+    grid-column: 1/-1;
+    margin-bottom: 60px;
+  }
+
+  @include desktop {
+    grid-column: 1/2;
+    margin-bottom: 146px;
+  }
 }
 
 .live-example__description {
   @include text-description;
-}
+  margin: 0;
 
-.live-example__value--result {
-  @include font-info($font-header, 24px, 24px);
+  @include mobile {
+    margin-bottom: 20px;
+  }
 
   @include tablet {
+    grid-column: 1/-1;
+    margin-bottom: 55px;
+  }
+
+  @include desktop {
+    grid-column: 1/2;
+    margin-bottom: 69px;
+  }
+}
+
+.live-example__statistics {
+  display: grid;
+  margin: 0;
+
+  @include mobile {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 20px;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(auto-fill, 162px);
+    gap: 43px;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(auto-fill, 162px);
+    gap: 42px;
+    margin-bottom: 46px;
+  }
+}
+
+.live-example__value {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.live-example__value-result {
+  @include font-info($font-header, 24px, 24px);
+  margin: 0;
+  border: 1px solid $input-color-border;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include mobile {
+    padding: 14px 20px 17px;
+  }
+
+  @include tablet {
+    padding: 15px 24px 20px 24px;
     font-size: 30px;
     line-height: 37px;
   }
 }
 
-.live-example__value--description {
-  @include font-info($font-header, 12px, 12px);
+.live-example__value-description {
+  @include font-info($font-primary, 12px, 12px);
+  position: relative;
+  top: -8px;
 
   @include tablet {
     font-size: 14px;
@@ -29,9 +136,38 @@
 
 .live-example__cost {
   @include font-info($font-header, 14px, 20px);
+  margin: 0;
+  text-transform: uppercase;
+
+  @include mobile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
   @include tablet {
     font-size: 20px;
     line-height: 20px;
+    margin-top: 11px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  @include desktop {
+    text-align: left;
+    display: block;
+  }
+}
+
+.live-example__slider {
+  @include tablet {
+    grid-column: 1/-1;
+  }
+
+  @include desktop {
+    margin-top: 0;
+    grid-column: 2/-1;
+    grid-row: 1/5;
   }
 }

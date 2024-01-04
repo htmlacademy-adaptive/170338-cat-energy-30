@@ -42,11 +42,15 @@
   @include button-small;
   display: block;
   text-align: center;
-  background: $button-color-alternate;
+  background-color: $button-color-alternate;
   color: $font-color-accent;
 
   &:hover {
-    background: $font-color-accent;
+    background-color: $button-color-alternate-hover;
+  }
+
+  &:active {
+    background-color: $button-color-alternate-hover;
   }
 }
 
