@@ -171,3 +171,25 @@
     grid-row: 1/5;
   }
 }
+
+.live-example__slider {
+  @include mobile {
+    margin: 0 auto;
+    width: 280px;
+    height: 256px;
+  }
+
+  @include tablet {
+    margin: 0 auto;
+    width: 560px;
+    height: 512px;
+    grid-column: 1 / -1;
+    margin-top: 90px;
+  }
+
+  @include desktop {
+    margin-top: 0;
+    grid-column: 2 / -1;
+    grid-row: 1 / 5;
+  }
+}

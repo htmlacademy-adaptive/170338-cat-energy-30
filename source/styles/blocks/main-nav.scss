@@ -102,3 +102,16 @@
     justify-content: flex-end;
   }
 }
+
+@include mobile {
+  .main-nav--no-js {
+    .main-nav__toggle {
+      visibility: hidden;
+    }
+
+    .main-nav__wrapper {
+      visibility: visible;
+    }
+  }
+}
+

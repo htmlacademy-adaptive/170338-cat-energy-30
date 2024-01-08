@@ -25,7 +25,7 @@
         </picture>
         <img class="header__logo-title" src="images/logo-title.svg" width="101" height="18" alt="Cat Energy.">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--no-js">
         <button class="main-nav__toggle main-nav__toggle--closed" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
@@ -134,7 +134,7 @@
               <source type="image/webp" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.webp 1x, images/cat-before-tablet@2x.webp 2x" width="560" height="512">
               <source type="image/webp" srcset="images/cat-before-mobile@1x.webp 1x, images/cat-before-mobile@2x.webp 2x" width="280" height="256">
               <source type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x" width="560" height="512">
-              <img class="slider__image" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Упитанный кот.">
+              <img class="slider__image slider__image--before" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Упитанный кот.">
             </picture>
           </div>
           <div class="slider__image-wrapper slider__image-wrapper--after">
@@ -142,9 +142,17 @@
               <source type="image/webp" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.webp 1x, images/cat-after-tablet@2x.webp 2x" width="560" height="512">
               <source type="image/webp" srcset="images/cat-after-mobile@1x.webp 1x, images/cat-after-mobile@2x.webp 2x" width="280" height="256">
               <source type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x" width="560" height="512">
-              <img class="slider__image" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Тощий кот.">
+              <img class="slider__image slider__image--after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Тощий кот.">
             </picture>
           </div>
+          <button class="slider__button" type="button">
+            <span class="visually-hidden">Управление отображения кота до и после</span>
+            <span class="slider__toggle">
+              <svg class="slider__toggle--image" aria-hidden="true" focusable="false" width="24" height="18">
+                <use href="images/icons/stack.svg#thumb-icon"></use>
+              </svg>
+            </span>
+          </button>
         </div>
       </div>
     </section>
@@ -159,14 +167,18 @@
           </address>
         </div>
       </div>
-      <picture>
-        <source type="image/webp" media="(min-width: 1440px)" srcset="images/address-map-desktop@1x.webp 1x, images/address-map-desktop@2x.webp 2x" width="1440" height="400">
-        <source type="image/webp" media="(min-width: 768px)" srcset="images/address-map-tablet@1x.webp 1x, images/address-map-tablet@2x.webp 2x"  width="768" height="400">
-        <source type="image/webp" srcset="images/address-map-mobile@1x.webp 1x, images/address-map-mobile@2x.webp 2x" width="320" height="362">
-        <source type="image/png" media="(min-width: 1440px)" srcset="images/address-map-desktop@1x.png 1x, images/address-map-desktop@2x.png 2x" width="1440" height="400">
-        <source type="image/png" media="(min-width: 768px)" srcset="images/address-map-tablet@1x.png 1x, images/address-map-tablet@2x.png 2x" width="768" height="400">
-        <img class="contacts__address-map" src="images/address-map-mobile@1x.png" srcset="images/address-map-mobile@2x.png 2x" width="320" height="362" alt="Карта с адресом компании.">
-      </picture>
+      <div class="contacts__map">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="images/address-map-desktop@1x.webp 1x, images/address-map-desktop@2x.webp 2x" width="1440" height="400">
+          <source type="image/webp" media="(min-width: 768px)" srcset="images/address-map-tablet@1x.webp 1x, images/address-map-tablet@2x.webp 2x"  width="768" height="400">
+          <source type="image/webp" srcset="images/address-map-mobile@1x.webp 1x, images/address-map-mobile@2x.webp 2x" width="320" height="362">
+          <source type="image/png" media="(min-width: 1440px)" srcset="images/address-map-desktop@1x.png 1x, images/address-map-desktop@2x.png 2x" width="1440" height="400">
+          <source type="image/png" media="(min-width: 768px)" srcset="images/address-map-tablet@1x.png 1x, images/address-map-tablet@2x.png 2x" width="768" height="400">
+          <img class="contacts__address-map" src="images/address-map-mobile@1x.png" srcset="images/address-map-mobile@2x.png 2x" width="320" height="362" alt="Карта с адресом компании.">
+        </picture>
+        <iframe class="contacts__interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037861610246!2d30.3230474!3d59.9387165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sus!4v1704697621427!5m2!1sru!2sus"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Адрес на карте"></iframe>
+      </div>
     </section>
   </main>
   <footer class="footer">
