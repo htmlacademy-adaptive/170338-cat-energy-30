@@ -1,6 +1,10 @@
 @use "../global/variables.scss";
 @use "../global/mixins.scss";
 
+.contacts {
+  position: relative;
+}
+
 .contacts--alternate {
   background-color: $background-color-alternate;
 }
@@ -17,6 +21,16 @@
 
   @include tablet {
     padding: 56px 40px 62px;
+  }
+
+  @include desktop {
+    position: absolute;
+    z-index: 4;
+    top: 95px;
+    left: 110px;
+    padding: 60px 80px;
+    max-width: 565px;
+    background-color: $background-color-primary;
   }
 }
 
@@ -35,6 +49,16 @@
 
 .contacts__address-description {
   margin: 0;
+
+  @include tablet {
+    text-align: right;
+  }
+}
+
+.contacts__address-description--city {
+  @include tablet {
+    margin-top: 20px;
+  }
 }
 
 .contacts__map {

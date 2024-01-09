@@ -127,6 +127,7 @@
   @include font-info($font-primary, 12px, 12px);
   position: relative;
   top: -8px;
+  text-transform: lowercase;
 
   @include tablet {
     font-size: 14px;
