@@ -41,8 +41,8 @@
   height: 2px;
   background-color: $font-color-primary;
   box-shadow:
-    0 7px 0 0 $font-color-primary,
-    0 -7px 0 0 $font-color-primary;
+    0 8px 0 0 $font-color-primary,
+    0 -8px 0 0 $font-color-primary;
 }
 
 .main-nav__toggle--opened::before,
@@ -78,6 +78,8 @@
 .main-nav__toggle--closed ~ .main-nav__wrapper {
   @include mobile {
     visibility: hidden;
+    opacity: 0;
+    transition:  opacity 300ms linear, visibility 0s linear 500ms;
   }
 }
 
@@ -85,6 +87,8 @@
 .main-nav__toggle--opened ~ .main-nav__wrapper {
   @include mobile {
     visibility: visible;
+    opacity: 1;
+    transition:  opacity 300ms linear, visibility 0s linear;
   }
 }
 
