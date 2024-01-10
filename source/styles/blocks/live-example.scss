@@ -162,18 +162,6 @@
 }
 
 .live-example__slider {
-  @include tablet {
-    grid-column: 1/-1;
-  }
-
-  @include desktop {
-    margin-top: 0;
-    grid-column: 2/-1;
-    grid-row: 1/5;
-  }
-}
-
-.live-example__slider {
   @include mobile {
     margin: 0 auto;
     width: 280px;

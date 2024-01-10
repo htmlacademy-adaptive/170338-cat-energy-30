@@ -79,7 +79,7 @@
   @include mobile {
     visibility: hidden;
     opacity: 0;
-    transition:  opacity 300ms linear, visibility 0s linear 500ms;
+    transition: opacity 300ms linear, visibility 0s linear 500ms;
   }
 }
 
@@ -88,7 +88,7 @@
   @include mobile {
     visibility: visible;
     opacity: 1;
-    transition:  opacity 300ms linear, visibility 0s linear;
+    transition: opacity 300ms linear, visibility 0s linear;
   }
 }
 
@@ -118,4 +118,3 @@
     }
   }
 }
-

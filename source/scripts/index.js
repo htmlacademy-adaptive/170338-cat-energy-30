@@ -2,23 +2,21 @@
 let map;
 async function initMap() {
   const position = { lat: 59.93891906738281, lng: 30.322935104370117 };
+  const { Map } = await google.maps.importLibrary('maps'); // eslint-disable-line
 
-  const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-
-  map = new Map(document.querySelector(".contacts__interactive-map"), {
+  map = new Map(document.querySelector('.contacts__interactive-map'), {
     zoom: 16,
     center: position,
     disableDefaultUI: true,
-    mapId: "DEMO_MAP_ID",
+    mapId: 'DEMO_MAP_ID',
   });
 
   function getMarkerSize() {
     const screenWidth = window.innerWidth;
     if (screenWidth < 768) {
-      return new google.maps.Size(56, 52);
+      return new google.maps.Size(56, 52); // eslint-disable-line
     } else {
-      return new google.maps.Size(113, 106);
+      return new google.maps.Size(113, 106); // eslint-disable-line
     }
   }
 
@@ -35,7 +33,8 @@ async function initMap() {
     }
   }
 
-  let marker = new google.maps.Marker({
+  /* eslint-disable */
+  const marker = new google.maps.Marker({
     position: position,
     map: map,
     icon: {
@@ -43,6 +42,7 @@ async function initMap() {
       scaledSize: getMarkerSize()
     }
   });
+  /* eslint-enable */
 
   window.addEventListener('resize', () => {
     const newSize = getMarkerSize();
