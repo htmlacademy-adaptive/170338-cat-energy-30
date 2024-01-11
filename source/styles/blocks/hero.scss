@@ -12,6 +12,7 @@
   flex-direction: column;
 
   @include mobile {
+    padding-top: 27px;
     padding-bottom: 20px;
   }
 
@@ -29,6 +30,7 @@
 
 .hero__title {
   @include font-info($font-header, 36px, 36px);
+  margin: 0;
 
   @include mobile {
     color: $font-color-alternate;

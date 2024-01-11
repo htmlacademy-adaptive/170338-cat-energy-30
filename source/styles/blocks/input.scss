@@ -18,6 +18,10 @@
     color: rgba($font-color-accent, 0.6);
   }
 
+  &:invalid {
+    border: 2px solid $input-color-invalid;
+  }
+
   @include mobile {
     min-height: 45px;
     padding: 10px 15px;
@@ -109,4 +113,13 @@
   .form__control-input:checked + &::before {
     display: block;
   }
+}
+
+.input--numeric {
+  appearance: none;
+}
+
+.input--numeric::-webkit-inner-spin-button,
+.input--numeric::-webkit-outer-spin-button {
+  appearance: none;
 }

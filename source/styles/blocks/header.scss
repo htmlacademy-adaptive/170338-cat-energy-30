@@ -17,7 +17,6 @@
   @include mobile {
     position: relative;
     z-index: 3;
-    border-bottom: 1px solid #ebebeb;
   }
 
   @include tablet {
@@ -45,6 +44,7 @@
   @include mobile {
     padding-top: 13px;
     padding-bottom: 12px;
+    margin-right: 40px;
   }
 
   &:hover {

@@ -171,6 +171,10 @@
   }
 }
 
+.form__radio:focus-within {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
 .form__group-list {
   @include list-base;
   display: flex;
@@ -347,6 +351,10 @@
 .form__input-icon--tel {
   mask-image: url("../../images/icons/stack.svg#phone-icon");
   mask-repeat: no-repeat;
+
+  &:invalid {
+    background-color: $input-color-invalid;
+  }
 }
 
 .form__input-icon--email {
@@ -356,6 +364,10 @@
 
 .form__control-input:focus ~ .form__input-icon {
   background-color: $button-color-primary;
+}
+
+.form__control-input:invalid:not(:focus) ~ .form__input-icon {
+  background-color: $input-color-invalid;
 }
 
 .form__checkbox {
@@ -370,6 +382,10 @@
   @include tablet {
     padding: 6px 0 6px 60px;
   }
+}
+
+.form__checkbox:focus-within {
+  outline: -webkit-focus-ring-color auto 5px;
 }
 
 .form__button {

@@ -12,11 +12,12 @@
   <link rel="apple-touch-icon" href="favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA62NIwtUOacwruOtCwjzSmshxfJ7-CkxI&callback=initMap"></script>
 </head>
 
 <body class="page__body">
   <header class="header">
-    <div class="header__container page__container">
+    <div class="header__container header__container--accent page__container">
       <a class="header__logo" href="index.html">
         <picture>
           <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59">
@@ -25,7 +26,7 @@
         </picture>
         <img class="header__logo-title" src="images/logo-title.svg" width="101" height="18" alt="Cat Energy.">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--no-js">
         <button class="main-nav__toggle main-nav__toggle--closed" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
@@ -172,19 +173,22 @@
           <h2 class="visually-hidden">Контакты.</h2>
           <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
           <address class="contacts__address">
-            <p class="contacts__address-description">ул. Большая Конюшенная, д. 19/8</p>
-            <p class="contacts__address-description">Санкт-Петербург</p>
+            <p class="contacts__address-description">ул. Большая<br>Конюшенная,&nbsp;д.&nbsp;19/8</p>
+            <p class="contacts__address-description contacts__address-description--city">Санкт-Петербург</p>
           </address>
         </div>
       </div>
-      <picture>
-        <source type="image/webp" media="(min-width: 1440px)" srcset="images/address-map-desktop@1x.webp 1x, images/address-map-desktop@2x.webp 2x" width="1440" height="400">
-        <source type="image/webp" media="(min-width: 768px)" srcset="images/address-map-tablet@1x.webp 1x, images/address-map-tablet@2x.webp 2x"  width="768" height="400">
-        <source type="image/webp" srcset="images/address-map-mobile@1x.webp 1x, images/address-map-mobile@2x.webp 2x" width="320" height="362">
-        <source type="image/png" media="(min-width: 1440px)" srcset="images/address-map-desktop@1x.png 1x, images/address-map-desktop@2x.png 2x" width="1440" height="400">
-        <source type="image/png" media="(min-width: 768px)" srcset="images/address-map-tablet@1x.png 1x, images/address-map-tablet@2x.png 2x" width="768" height="400">
-        <img class="contacts__address-map" src="images/address-map-mobile@1x.png" srcset="images/address-map-mobile@2x.png 2x" width="320" height="362" alt="Карта с адресом компании.">
-      </picture>
+      <div class="contacts__map">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="images/address-map-desktop@1x.webp 1x, images/address-map-desktop@2x.webp 2x" width="1440" height="400">
+          <source type="image/webp" media="(min-width: 768px)" srcset="images/address-map-tablet@1x.webp 1x, images/address-map-tablet@2x.webp 2x"  width="768" height="400">
+          <source type="image/webp" srcset="images/address-map-mobile@1x.webp 1x, images/address-map-mobile@2x.webp 2x" width="320" height="362">
+          <source type="image/png" media="(min-width: 1440px)" srcset="images/address-map-desktop@1x.png 1x, images/address-map-desktop@2x.png 2x" width="1440" height="400">
+          <source type="image/png" media="(min-width: 768px)" srcset="images/address-map-tablet@1x.png 1x, images/address-map-tablet@2x.png 2x" width="768" height="400">
+          <img class="contacts__address-map" src="images/address-map-mobile@1x.png" srcset="images/address-map-mobile@2x.png 2x" width="320" height="362" alt="Карта с адресом компании.">
+        </picture>
+        <div class="contacts__interactive-map"></div>
+      </div>
     </section>
   </main>
   <footer class="footer">
@@ -195,18 +199,27 @@
       <div class="footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+            <a class="social__link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Вконтакте.</span>
+              <svg aria-hidden="true" focusable="false" width="28" height="22">
+                <use href="images/icons/stack.svg#vkontakte-icon"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Мы в Ютубе.</span>
+              <svg aria-hidden="true" focusable="false" width="28" height="22">
+                <use href="images/icons/stack.svg#youtube-icon"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+            <a class="social__link" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Мы в Телеграме.</span>
+              <svg aria-hidden="true" focusable="false" width="28" height="22">
+                <use href="images/icons/stack.svg#telegram-icon"></use>
+              </svg>
             </a>
           </li>
         </ul>

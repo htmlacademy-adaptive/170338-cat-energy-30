@@ -1,0 +1,97 @@
+.slider {
+  position: relative;
+  display: flex;
+}
+
+.slider__image-wrapper {
+  position: relative;
+  overflow-x: hidden;
+  height: 100%;
+  pointer-events: none;
+}
+
+.slider__image {
+  display: block;
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+  width: auto;
+  max-width: none;
+}
+
+
+.slider__image--before {
+  float: left;
+}
+
+.slider__image--after {
+  float: right;
+}
+
+.slider__button {
+  display: block;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  cursor: col-resize;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $icons-color-primary;
+    border-radius: 2px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $button-color-primary-hover;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: rgba($button-color-primary-hover, 0.6);
+    }
+  }
+}
+
+.slider__button:hover .slider__toggle {
+  border-color: $button-color-primary-hover;
+  color: $button-color-primary-hover;
+}
+
+.slider__button:active .slider__toggle {
+  border-color: rgba($button-color-primary-hover, 0.6);
+  color: rgba($button-color-primary-hover, 0.6);
+}
+
+.slider__toggle {
+  display: block;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-color: $background-color-primary;
+  border-radius: 50%;
+  border: 2px solid $icons-color-primary;
+  color: $icons-color-primary;
+  position: relative;
+}
+
+.slider__toggle-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
