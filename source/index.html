@@ -12,7 +12,6 @@
   <link rel="apple-touch-icon" href="favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA62NIwtUOacwruOtCwjzSmshxfJ7-CkxI&callback=initMap"></script>
 </head>
 
 <body class="page__body">
@@ -161,7 +160,7 @@
       <div class="page__container">
         <div class="contacts__container">
           <h2 class="visually-hidden">Контакты.</h2>
-          <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <address class="contacts__address">
             <p class="contacts__address-description">ул. Большая<br>Конюшенная,&nbsp;д.&nbsp;19/8</p>
             <p class="contacts__address-description contacts__address-description--city">Санкт-Петербург</p>
@@ -177,7 +176,7 @@
           <source type="image/png" media="(min-width: 768px)" srcset="images/address-map-tablet@1x.png 1x, images/address-map-tablet@2x.png 2x" width="768" height="400">
           <img class="contacts__address-map" src="images/address-map-mobile@1x.png" srcset="images/address-map-mobile@2x.png 2x" width="320" height="362" alt="Карта с адресом компании.">
         </picture>
-        <div class="contacts__interactive-map"></div>
+        <div class="contacts__interactive-map contacts__interactive-map--no-js"></div>
       </div>
     </section>
   </main>
@@ -221,5 +220,8 @@
       </div>
     </div>
   </footer>
+  <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+    ({key: "AIzaSyA62NIwtUOacwruOtCwjzSmshxfJ7-CkxI", v: "beta"});
+  </script>
 </body>
 </html>

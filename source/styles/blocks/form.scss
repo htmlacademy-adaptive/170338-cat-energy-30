@@ -45,8 +45,8 @@
 .form__group--program {
   @include mobile {
     margin-bottom: 26px;
-    padding-top: 24px;
-    padding-bottom: 20px;
+    padding-top: 26px;
+    padding-bottom: 24px;
 
     &::before,
     &::after {
@@ -122,7 +122,7 @@
 }
 
 .form__group--additional {
-  margin-bottom: 34px;
+  margin-bottom: 38px;
 
   @include desktop {
     grid-column: 1/-1;
@@ -153,7 +153,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 13px;
+  gap: 14px;
 }
 
 .form__radio {
@@ -163,7 +163,7 @@
   padding-left: 45px;
 
   @include mobile {
-    padding: 6px 0 6px 46px;
+    padding: 1px 0 0px 45px;
   }
 
   @include tablet {
@@ -172,7 +172,7 @@
 }
 
 .form__radio:focus-within {
-  outline: -webkit-focus-ring-color auto 5px;
+  outline: $font-color-accent auto 2px;
 }
 
 .form__group-list {
@@ -190,6 +190,10 @@
 }
 
 .form__group-list--additional {
+  @include mobile {
+    padding-top: 6px;
+  }
+
   @include tablet {
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
@@ -257,7 +261,7 @@
 
 .form__title--contacts {
   @include mobile {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     padding-right: 10px;
   }
 
@@ -376,7 +380,7 @@
   display: block;
 
   @include mobile {
-    padding: 6px 0 6px 46px;
+    padding: 0 0 0 46px;
   }
 
   @include tablet {
@@ -385,7 +389,7 @@
 }
 
 .form__checkbox:focus-within {
-  outline: -webkit-focus-ring-color auto 5px;
+  outline: $font-color-accent auto 5px;
 }
 
 .form__button {
