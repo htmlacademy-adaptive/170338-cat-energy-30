@@ -14,12 +14,16 @@
 
   @include desktop {
     background-color: $background-color-primary;
-    background-image: linear-gradient($background-color-transparent 0 136px, $background-color-alternate-accent 136px 100%);
+    background-image: linear-gradient($background-color-transparent 0 136px, $background-color-alternate-accent 1156px 100%);
   }
 }
 
 .live-example__container {
   display: grid;
+
+  @include mobile {
+    padding-bottom: 40px;
+  }
 
   @include tablet {
     grid-template-columns: 2fr 1fr;
@@ -32,7 +36,7 @@
   @include desktop {
     grid-template-columns: auto 560px;
     column-gap: 224px;
-    padding-top: 0;
+    padding-top: 20px;
     padding-bottom: 75px;
   }
 }
@@ -46,12 +50,12 @@
 
   @include tablet {
     grid-column: 1/-1;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   @include desktop {
     grid-column: 1/2;
-    margin-bottom: 146px;
+    margin-bottom: 126px;
   }
 }
 
@@ -65,12 +69,13 @@
 
   @include tablet {
     grid-column: 1/-1;
-    margin-bottom: 55px;
+    margin-bottom: 35px;
   }
 
   @include desktop {
     grid-column: 1/2;
-    margin-bottom: 69px;
+    margin-bottom: 49px;
+    max-width: 432px;
   }
 }
 
@@ -81,7 +86,7 @@
   @include mobile {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 9px;
   }
 
   @include tablet {
@@ -92,7 +97,7 @@
   @include desktop {
     grid-template-columns: repeat(auto-fill, 162px);
     gap: 42px;
-    margin-bottom: 46px;
+    margin-bottom: 13px;
   }
 }
 
@@ -111,6 +116,7 @@
   border: 1px solid $input-color-border;
   text-align: center;
   text-transform: uppercase;
+  border-radius: 3px;
 
   @include mobile {
     padding: 14px 20px 17px;
@@ -126,12 +132,25 @@
 .live-example__value-description {
   @include font-info($font-primary, 12px, 12px);
   position: relative;
-  top: -8px;
+  top: -10px;
   text-transform: lowercase;
+  text-align: center;
+  align-self: center;
+
+  @include mobile {
+    max-width: 79px;
+    background-color: $background-color-alternate-accent;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
 
   @include tablet {
     font-size: 14px;
     line-height: 14px;
+    background-color: $background-color-primary;
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
 
@@ -157,7 +176,9 @@
 
   @include desktop {
     text-align: left;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    gap: 66px;
   }
 }
 
@@ -173,7 +194,7 @@
     width: 560px;
     height: 512px;
     grid-column: 1 / -1;
-    margin-top: 90px;
+    margin-top: 68px;
   }
 
   @include desktop {

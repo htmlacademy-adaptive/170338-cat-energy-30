@@ -3,7 +3,15 @@
 
 .how-it-work {
   position: relative;
-  padding-bottom: 47px;
+  padding-bottom: 49px;
+
+  @include tablet {
+    padding-top: 45px;
+  }
+
+  @include desktop {
+    padding-top: 71px;
+  }
 }
 
 .how-it-work::after {
@@ -25,18 +33,19 @@
 .how-it-work__list {
   @include list-base;
   display: grid;
-  gap: 26px;
+  gap: 20px;
   counter-reset: how-it-work-counter;
 
   @include tablet {
     grid-template-columns: 1fr 1fr;
-    column-gap: 154px;
+    column-gap: 60px;
     row-gap: 37px;
+    margin-top: 32px;
   }
 
   @include desktop {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 95px;
+    column-gap: 80px;
   }
 }
 
@@ -51,8 +60,7 @@
   }
 
   @include tablet {
-    grid-template-columns: auto;
-    gap: 31px;
+    display: block;
     padding: 40px 0;
     min-height: 280px;
   }
@@ -61,6 +69,10 @@
 .how-it-work__description {
   margin: 0;
   align-self: center;
+
+  @include tablet {
+    max-width: 243px;
+  }
 }
 
 .how-it-work__item::before {
@@ -78,6 +90,7 @@
 
   @include tablet {
     width: 80px;
+    margin-bottom: 31px;
   }
 }
 
@@ -89,9 +102,13 @@
     color: $background-color-alternate;
     position: absolute;
     min-width: 134px;
-    right: 0;
+    right: 75px;
     top: 0;
     z-index: -1;
+  }
+
+  @include desktop {
+    right: -5px;
   }
 }
 
@@ -113,4 +130,11 @@
 .how-it-work__item--time::before {
   background-image: url("../../images/icons/stack.svg#time-icon");
   background-size: 27px 31px;
+}
+
+.how-it-work__title {
+  @include mobile {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
 }

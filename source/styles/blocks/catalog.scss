@@ -3,11 +3,15 @@
 
 .catalog__container {
   @include mobile {
-    padding-top: 27px;
+    padding-top: 28px;
   }
 
   @include tablet {
     padding-top: 65px;
+  }
+
+  @include desktop {
+    padding-top: 73px;
   }
 }
 
@@ -22,7 +26,7 @@
   @include tablet {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 64px;
+    margin-bottom: 84px;
   }
 }
 
@@ -33,5 +37,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
     gap: 60px;
+  }
+
+  @include desktop {
+    column-gap: 80px;
+    row-gap: 62px;
   }
 }

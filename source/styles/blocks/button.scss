@@ -7,11 +7,18 @@
 }
 
 .button--primary {
-  @include button-large;
+  @include font-info($font-header, 16px, 20px);
+  padding: 10px;
   display: block;
   text-align: center;
   background: $button-color-primary;
   color: $font-color-alternate;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 14px;
+  }
 
   &:hover {
     background: $button-color-primary-hover;

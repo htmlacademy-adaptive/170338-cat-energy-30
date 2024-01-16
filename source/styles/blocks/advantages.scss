@@ -6,6 +6,10 @@
   display: grid;
   gap: 20px;
 
+  @include tablet {
+    gap: 30px;
+  }
+
   @include desktop {
     grid-template-columns: 1fr 1fr;
     gap: 80px;
@@ -18,7 +22,7 @@
   @include mobile {
     display: grid;
     grid-template-columns: 50px auto;
-    padding: 21px 20px 18px 20px;
+    padding: 23px 20px 22px;
     gap: 19px;
   }
 
@@ -51,7 +55,7 @@
   @include tablet {
     width: 200px;
     position: absolute;
-    top: 81px;
+    top: 92px;
     right: 63px;
   }
 
@@ -75,6 +79,10 @@
   background-size: contain;
   background-position: center;
   background-image: url("../../images/icons/stack.svg#lean-cat-icon");
+
+  @include tablet {
+    width: 140px;
+  }
 }
 
 .advantages__item-image--fat::before {
@@ -89,6 +97,16 @@
   background-size: contain;
   background-position: center;
   background-image: url("../../images/icons/stack.svg#strong-cat-icon");
+
+  @include tablet {
+    transform: translate(-50%, -50%);
+    width: 269px;
+  }
+
+  @include desktop {
+    transform: translate(-51%,-52%);
+    width: 134%;
+  }
 }
 
 .advantages__item-title {
@@ -118,8 +136,8 @@
   margin: 0;
 
   @include mobile {
-    margin-top: 22px;
-    margin-bottom: 38px;
+    margin-top: 4px;
+    margin-bottom: 23px;
 
     &::after {
       content: "";
@@ -136,7 +154,7 @@
   @include tablet {
     margin-top: 24px;
     margin-bottom: 52px;
-    margin-right: 238px;
+    margin-right: 250px;
   }
 
   @include desktop {

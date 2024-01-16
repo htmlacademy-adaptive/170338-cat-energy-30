@@ -34,9 +34,9 @@
     position: absolute;
     background-color: $background-color-accent;
     height: 2px;
-    bottom: 2px;
-    left: 17px;
-    right: 17px;
+    bottom: 5px;
+    left: 33px;
+    right: 0px;
   }
 }
 
@@ -70,7 +70,11 @@
   }
 
   @include tablet {
-    padding: 12px 17px 12px 17px;
+    padding: 12px 0px 12px 34px;
+  }
+
+  @include desktop {
+    padding-left: 35px;
   }
 }
 

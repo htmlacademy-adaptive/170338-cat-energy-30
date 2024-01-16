@@ -3,6 +3,7 @@
 
 .section-title {
   @include font-info($font-header, 36px, 40px);
+  margin: 0;
 
   @include tablet {
     font-size: 60px;

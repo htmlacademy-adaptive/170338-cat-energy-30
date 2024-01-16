@@ -20,7 +20,7 @@
   }
 
   @include tablet {
-    padding: 56px 40px 62px;
+    padding: 60px 40px 62px;
   }
 
   @include desktop {
@@ -28,9 +28,11 @@
     z-index: 4;
     top: 95px;
     left: 110px;
-    padding: 60px 80px;
+    padding: 59px 80px;
     max-width: 565px;
+    min-width: 565px;
     background-color: $background-color-primary;
+    column-gap: 92px;
   }
 }
 
@@ -43,6 +45,7 @@
   @include tablet {
     font-size: 20px;
     line-height: 26px;
+    max-width: 165px;
   }
 }
 
@@ -51,6 +54,10 @@
 
   @include tablet {
     text-align: right;
+  }
+
+  @include desktop {
+    text-align: left;
   }
 }
 
