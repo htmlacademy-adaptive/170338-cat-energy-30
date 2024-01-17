@@ -14,7 +14,7 @@
 
   @include desktop {
     background-color: $background-color-primary;
-    background-image: linear-gradient($background-color-transparent 0 136px, $background-color-alternate-accent 1156px 100%);
+    background-image: linear-gradient($background-color-transparent 0 156px, $background-color-alternate-accent 156px 100%);
   }
 }
 
@@ -151,6 +151,10 @@
     background-color: $background-color-primary;
     padding-left: 8px;
     padding-right: 8px;
+  }
+
+  @include desktop {
+    background-color: $background-color-alternate-accent;
   }
 }
 
