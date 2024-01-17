@@ -36,7 +36,7 @@
     height: 2px;
     bottom: 5px;
     left: 33px;
-    right: 0px;
+    right: 0;
   }
 }
 
@@ -70,7 +70,7 @@
   }
 
   @include tablet {
-    padding: 12px 0px 12px 34px;
+    padding: 12px 0 12px 34px;
   }
 
   @include desktop {

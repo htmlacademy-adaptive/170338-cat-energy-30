@@ -4,6 +4,10 @@
 .button {
   @include button-base;
   border: none;
+
+  &:disabled {
+    opacity: 30%;
+  }
 }
 
 .button--primary {
