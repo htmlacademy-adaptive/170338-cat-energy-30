@@ -14,18 +14,22 @@
   }
 
   @include tablet {
-    padding-top: 57px;
+    padding-top: 54px;
     padding-bottom: 57px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+  }
+
+  @include desktop {
+    padding-top: 67px;
   }
 }
 
 .footer__logo {
   @include mobile {
     align-self: center;
-    padding-bottom: 32px;
+    padding-bottom: 17px;
   }
 }
 
@@ -44,9 +48,9 @@
 .footer__social {
   @include mobile {
     padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 17px;
+    border-top: 1px solid $border-color-secondary;
+    border-bottom: 1px solid $border-color-secondary;
   }
 }
 
@@ -54,7 +58,7 @@
   position: relative;
 
   @include mobile {
-    margin-top: 27px;
+    margin-top: 20px;
   }
 
   @include tablet {
@@ -83,7 +87,7 @@
   }
 
   @include tablet {
-    gap: 50px;
+    gap: 23px;
   }
 }
 

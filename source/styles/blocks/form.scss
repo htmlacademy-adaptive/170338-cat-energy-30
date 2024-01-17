@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
-    row-gap: 70px;
+    row-gap: 65px;
     align-items: start;
   }
 }
@@ -31,7 +31,7 @@
   }
 
   @include tablet {
-    gap: 20px;
+    gap: 18px;
     margin-bottom: 72px;
     padding-right: 38px;
   }
@@ -45,8 +45,8 @@
 .form__group--program {
   @include mobile {
     margin-bottom: 26px;
-    padding-top: 24px;
-    padding-bottom: 20px;
+    padding-top: 26px;
+    padding-bottom: 24px;
 
     &::before,
     &::after {
@@ -69,7 +69,7 @@
   }
 
   @include tablet {
-    margin-bottom: 75px;
+    margin-bottom: 64px;
     padding-right: 38px;
   }
 
@@ -89,9 +89,9 @@
   }
 
   @include tablet {
-    gap: 20px;
-    margin-bottom: 66px;
-    padding-right: 36px;
+    gap: 19px;
+    margin-bottom: 64px;
+    padding-right: 38px;
   }
 
   @include desktop {
@@ -101,6 +101,7 @@
     column-gap: 80px;
     margin: 0;
     padding: 0;
+    margin-bottom: 3px;
   }
 }
 
@@ -111,22 +112,29 @@
 
   @include tablet {
     margin-bottom: 66px;
-    padding-right: 36px;
+    padding-right: 39px;
   }
 
   @include desktop {
     grid-column: 1/-1;
     margin: 0;
     padding: 0;
+    margin-bottom: 6px;
   }
 }
 
 .form__group--additional {
-  margin-bottom: 34px;
+  margin-bottom: 38px;
+
+  @include tablet {
+    margin-bottom: 51px;
+  }
 
   @include desktop {
     grid-column: 1/-1;
     margin: 0;
+    padding: 0;
+    padding-top: 5px;
   }
 }
 
@@ -139,13 +147,15 @@
 
   @include tablet {
     grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
+    column-gap: 59px;
     row-gap: 32px;
   }
 
   @include desktop {
     grid-column: 1/-1;
     column-gap: 80px;
+    padding: 0;
+    margin-top: -6px;
   }
 }
 
@@ -153,7 +163,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 13px;
+  gap: 14px;
 }
 
 .form__radio {
@@ -163,7 +173,7 @@
   padding-left: 45px;
 
   @include mobile {
-    padding: 6px 0 6px 46px;
+    padding: 1px 0 0 45px;
   }
 
   @include tablet {
@@ -172,7 +182,7 @@
 }
 
 .form__radio:focus-within {
-  outline: -webkit-focus-ring-color auto 5px;
+  outline: $font-color-accent auto 2px;
 }
 
 .form__group-list {
@@ -190,10 +200,14 @@
 }
 
 .form__group-list--additional {
+  @include mobile {
+    padding-top: 6px;
+  }
+
   @include tablet {
     grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
-    row-gap: 32px;
+    column-gap: 61px;
+    row-gap: 29px;
   }
 
   @include desktop {
@@ -205,9 +219,14 @@
 
 .form__group-list--program {
   @include tablet {
-    row-gap: 14px;
-    padding: 23px 27px;
+    row-gap: 13px;
+    padding: 21px 27px;
+    padding-bottom: 27px;
     border: 1px solid $border-color-secondary;
+  }
+
+  @include desktop {
+    padding-top: 25px;
   }
 }
 
@@ -233,7 +252,7 @@
     font-size: 36px;
     line-height: 36px;
     padding: 0 40px;
-    margin-bottom: 76px;
+    margin-bottom: 86px;
     margin-left: -40px;
   }
 }
@@ -257,14 +276,18 @@
 
 .form__title--contacts {
   @include mobile {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     padding-right: 10px;
   }
 
   @include tablet {
-    margin-bottom: 56px;
+    margin-bottom: 55px;
     margin-left: -40px;
     padding: 0 40px;
+  }
+
+  @include desktop {
+    padding: 3px 40px;
   }
 }
 
@@ -272,11 +295,24 @@
   @include mobile {
     margin-bottom: 38px;
   }
+
+  @include desktop {
+    margin-bottom: 76px;
+  }
 }
 
 .form__title--additional {
   @include mobile {
     margin-bottom: 34px;
+  }
+
+  @include tablet {
+    margin-bottom: 57px;
+  }
+
+  @include desktop {
+    margin-top: -6px;
+    margin-bottom: 56px;
   }
 }
 
@@ -304,7 +340,7 @@
   @include tablet {
     font-size: 20px;
     line-height: 30px;
-    min-height: 174px;
+    min-height: 175px;
   }
 }
 
@@ -320,6 +356,8 @@
     font-size: 16px;
     line-height: 16px;
     align-self: center;
+    margin-top: -4px;
+    margin-left: -2px;
   }
 }
 
@@ -340,7 +378,7 @@
   }
 
   @include tablet {
-    right: 14px;
+    right: 15px;
   }
 
   @include desktop {
@@ -376,7 +414,7 @@
   display: block;
 
   @include mobile {
-    padding: 6px 0 6px 46px;
+    padding: 0 0 0 46px;
   }
 
   @include tablet {
@@ -385,10 +423,13 @@
 }
 
 .form__checkbox:focus-within {
-  outline: -webkit-focus-ring-color auto 5px;
+  outline: $font-color-accent auto 5px;
 }
 
 .form__button {
-  @include font-info($font-header, 16px, 20px);
   min-height: 40px;
+
+  @include tablet {
+    min-height: 54px;
+  }
 }

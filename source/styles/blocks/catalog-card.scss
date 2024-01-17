@@ -9,7 +9,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content 1fr 40px;
     row-gap: 12px;
-    padding-top: 20px;
+    padding-top: 21px;
     padding-bottom: 25px;
   }
 
@@ -20,6 +20,10 @@
     padding: 37px 37px 40px;
     background-color: $background-color-alternate;
     margin-top: 81px;
+  }
+
+  @include desktop {
+    padding-bottom: 43px;
   }
 }
 
@@ -44,8 +48,12 @@
 
   @include tablet {
     height: 210px;
-    margin-bottom: 34px;
+    margin-bottom: 9px;
     margin-top: -95px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
   }
 }
 
@@ -63,12 +71,13 @@
 
 .catalog-card__image-small {
   @include mobile {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     align-self: center;
     max-height: 100%;
   }
 
   @include tablet {
+    margin-top: 6px;
     height: 172px;
   }
 }
@@ -77,11 +86,17 @@
   @include mobile {
     align-self: flex-end;
     height: 100px;
+    margin-bottom: 10px;
   }
 
   @include tablet {
-    margin-bottom: -10px;
-    height: 210px;
+    margin-top: -12px;
+    height: 206px;
+  }
+
+  @include desktop {
+    margin-top: -6px;
+    height: 197px;
   }
 }
 
@@ -103,11 +118,23 @@
   }
 }
 
+.catalog-card__title-size {
+  @include tablet {
+    display: block;
+  }
+}
+
 .catalog-card__button {
   @include mobile {
     grid-column: 1 / -1;
   }
 
+  @include tablet {
+    margin-top: 0;
+  }
+}
+
+.catalog-card__button--more {
   @include tablet {
     margin-top: auto;
   }
@@ -121,8 +148,8 @@
   margin: 0;
 
   @include mobile {
-    text-transform: uppercase;
-    margin-bottom: 11px;
+    margin-top: 3px;
+    margin-bottom: 8px;
   }
 
   @include tablet {
@@ -144,6 +171,7 @@
   @include tablet {
     font-size: 16px;
     line-height: 18px;
+    max-width: 170px;
   }
 }
 
@@ -153,8 +181,12 @@
   gap: 20px;
 
   @include tablet {
-    padding: 7px 0 8px;
+    padding: 7px 0 3px;
     border-bottom: 1px solid $input-color-border;
+  }
+
+  @include desktop {
+    padding: 8px 0 5px;
   }
 }
 
@@ -181,7 +213,11 @@
   }
 
   @include tablet {
-    margin-bottom: 23px;
+    margin-bottom: 9px;
+  }
+
+  @include desktop {
+    margin-bottom: 11px;
   }
 }
 
@@ -224,5 +260,9 @@
     height: 60px;
     background-size: 60px;
     margin-bottom: 48px;
+  }
+
+  @include desktop {
+    margin-bottom: 37px;
   }
 }

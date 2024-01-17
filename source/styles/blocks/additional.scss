@@ -9,20 +9,21 @@
   position: relative;
 
   @include mobile {
-    margin-top: 24px;
+    margin-top: 17px;
     margin-bottom: 35px;
   }
 
   @include tablet {
     margin-top: 70px;
-    margin-bottom: 75px;
+    margin-bottom: 76px;
   }
 
   @include desktop {
-    margin-top: 35px;
+    margin-top: 73px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
+    margin-bottom: 22px;
   }
 }
 
@@ -36,7 +37,7 @@
   grid-column: 1/-1;
 
   @include mobile {
-    margin-bottom: 34px;
+    margin-bottom: 29px;
   }
 
   @include tablet {
@@ -77,7 +78,7 @@
   }
 
   @include tablet {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
   }
 
   @include desktop {
@@ -89,14 +90,14 @@
   display: grid;
 
   @include mobile {
-    padding-top: 13px;
+    padding-top: 14px;
     padding-bottom: 19px;
-    row-gap: 15px;
+    row-gap: 13px;
     border-top: 1px solid $input-color-border;
   }
 
   @include tablet {
-    padding: 26px 38px 28px;
+    padding: 24px 37px 29px;
     border: 1px solid $input-color-border;
     border-bottom: 0;
     grid-template-columns: 1fr 1fr;
@@ -162,12 +163,24 @@
   }
 }
 
-.additional__item-description-item {
+.additional__item-description-name {
   @include tablet {
     text-align: right;
   }
 
   @include desktop {
+    margin-left: 0;
+    text-align: left;
+  }
+}
+
+.additional__item-description-ammount {
+  @include tablet {
+    text-align: right;
+  }
+
+  @include desktop {
+    margin-left: 29px;
     text-align: left;
   }
 }

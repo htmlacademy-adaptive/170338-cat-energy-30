@@ -38,7 +38,7 @@ async function initMap() {
     position: position,
     map: map,
     icon: {
-      url: '../images/map-marker.png',
+      url: 'images/map-marker.png',
       scaledSize: getMarkerSize()
     }
   });
@@ -47,7 +47,7 @@ async function initMap() {
   window.addEventListener('resize', () => {
     const newSize = getMarkerSize();
     marker.setIcon({
-      url: '../images/map-marker.png',
+      url: 'images/map-marker.png',
       scaledSize: newSize
     });
 
@@ -57,18 +57,17 @@ async function initMap() {
   adjustMapCenter();
 }
 
-(() => {
-  const mainNavigation = document.querySelector('.main-nav');
-  const mainNavigationToggle = document.querySelector('.main-nav__toggle');
+const mainNavigation = document.querySelector('.main-nav');
+const mainNavigationToggle = document.querySelector('.main-nav__toggle');
 
-  mainNavigation.classList.remove('main-nav--no-js');
+mainNavigation.classList.remove('main-nav--no-js');
 
-  mainNavigationToggle.addEventListener('click', () => {
-    mainNavigationToggle.classList.toggle('main-nav__toggle--closed');
-    mainNavigationToggle.classList.toggle('main-nav__toggle--opened');
-  });
+mainNavigationToggle.addEventListener('click', () => {
+  mainNavigationToggle.classList.toggle('main-nav__toggle--closed');
+  mainNavigationToggle.classList.toggle('main-nav__toggle--opened');
+});
 
-  window.onload = function () {
-    initMap();
-  };
-})();
+const interactiveMap = document.querySelector('.contacts__interactive-map');
+interactiveMap.classList.remove('contacts__interactive-map--no-js');
+
+initMap();

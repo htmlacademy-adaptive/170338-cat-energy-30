@@ -19,7 +19,15 @@
   }
 
   &:invalid {
-    border: 2px solid $input-color-invalid;
+    outline: 2px solid $input-color-invalid;
+  }
+
+  &:disabled {
+    opacity: 30%;
+  }
+
+  &:focus-within {
+    outline: $font-color-accent auto 5px;
   }
 
   @include mobile {
@@ -31,13 +39,13 @@
     min-height: 52px;
     font-size: 20px;
     line-height: 20px;
-    padding: 11px 20px;
+    padding: 11px 19px;
   }
 }
 
 .input--with-icon {
   @include mobile {
-    padding: 10px 40px 10px 15px;
+    padding: 10px 40px 10px 13px;
   }
 }
 
@@ -52,6 +60,7 @@
   width: 30px;
   border: 1px solid $input-color-border;
   border-radius: 50%;
+  padding: 0;
 
   @include tablet {
     width: 40px;
@@ -92,6 +101,11 @@
   min-height: 30px;
   width: 30px;
   border: 1px solid $input-color-border;
+  padding: 0;
+
+  @include tablet {
+    width: 40px;
+  }
 
   &::before {
     content: "";
@@ -108,6 +122,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     display: none;
+
+    @include tablet {
+      width: 25px;
+      height: 25px;
+    }
   }
 
   .form__control-input:checked + &::before {
@@ -122,4 +141,5 @@
 .input--numeric::-webkit-inner-spin-button,
 .input--numeric::-webkit-outer-spin-button {
   appearance: none;
+  margin: 0;
 }

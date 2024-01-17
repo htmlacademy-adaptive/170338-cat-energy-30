@@ -101,9 +101,14 @@
   }
 
   @include tablet {
+    max-width: 500px;
     flex-direction: row;
     align-items: baseline;
-    justify-content: flex-end;
+    row-gap: 10px;
+  }
+
+  @include desktop {
+    max-width: 600px;
   }
 }
 

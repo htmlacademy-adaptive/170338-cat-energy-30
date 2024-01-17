@@ -24,7 +24,9 @@
 
   @include desktop {
     min-height: 596px;
-    margin-bottom: 82px;
+    margin-bottom: 65px;
+    padding-left: 80px;
+    padding-top: 109px;
   }
 }
 
@@ -61,7 +63,7 @@
   @include tablet {
     @include font-info($font-header, 20px, 20px);
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 49px;
   }
 
   @include desktop {
@@ -76,10 +78,11 @@
     min-width: 280px;
     height: auto;
     margin: 0 auto;
+    margin-bottom: 3px;
   }
 
   @include tablet {
-    margin-top: -82px;
+    margin-top: -83px;
     margin-left: -90px;
   }
 
