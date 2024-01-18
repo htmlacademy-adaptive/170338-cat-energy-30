@@ -35,8 +35,8 @@
     background-color: $background-color-accent;
     height: 2px;
     bottom: 5px;
-    left: 33px;
-    right: 0;
+    left: 17px;
+    right: 17px;
   }
 }
 
@@ -53,14 +53,6 @@
   color: $font-color-primary;
   position: relative;
 
-  @include mobile {
-    display: block;
-    background-color: $background-color-primary;
-    color: $font-color-primary;
-    padding: 22px 20px 23px;
-    border-bottom: 1px solid $border-color-alternate;
-  }
-
   &:hover {
     color: rgba($font-color-primary, 0.6);
   }
@@ -69,12 +61,16 @@
     color: rgba($font-color-primary, 0.3);
   }
 
-  @include tablet {
-    padding: 12px 0 12px 34px;
+  @include mobile {
+    display: block;
+    background-color: $background-color-primary;
+    color: $font-color-primary;
+    padding: 22px 20px 23px;
+    border-bottom: 1px solid $border-color-alternate;
   }
 
-  @include desktop {
-    padding-left: 35px;
+  @include tablet {
+    padding: 12px 17px;
   }
 }
 
