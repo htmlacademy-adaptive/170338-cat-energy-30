@@ -105,6 +105,7 @@
     flex-direction: row;
     align-items: baseline;
     row-gap: 10px;
+    margin-right: -14px;
   }
 
   @include desktop {
