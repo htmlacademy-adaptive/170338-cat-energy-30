@@ -60,11 +60,16 @@ async function initMap() {
 const mainNavigation = document.querySelector('.main-nav');
 const mainNavigationToggle = document.querySelector('.main-nav__toggle');
 
-mainNavigation.classList.remove('main-nav--no-js');
-
-mainNavigationToggle.addEventListener('click', () => {
+function setMenuState() {
   mainNavigationToggle.classList.toggle('main-nav__toggle--closed');
   mainNavigationToggle.classList.toggle('main-nav__toggle--opened');
+}
+
+mainNavigation.classList.remove('main-nav--no-js');
+setMenuState();
+
+mainNavigationToggle.addEventListener('click', () => {
+  setMenuState();
 });
 
 const interactiveMap = document.querySelector('.contacts__interactive-map');
