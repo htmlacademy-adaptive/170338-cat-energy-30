@@ -11,19 +11,19 @@
 }
 
 @mixin desktop {
-  @media (min-width: $view-port-desktop) {
+  @media (min-width: variables.$view-port-desktop) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: $view-port-tablet) {
+  @media (min-width: variables.$view-port-tablet) {
     @content;
   }
 }
 
 @mixin mobile {
-  @media (max-width: calc($view-port-tablet - 1px)) {
+  @media (max-width: calc(variables.$view-port-tablet - 1px)) {
     @content;
   }
 }
@@ -37,8 +37,8 @@
 }
 
 @mixin text-description {
-  @include font-info($font-primary, 14px, 18px);
-  color: $font-color-accent;
+  @include font-info(variables.$font-primary, 14px, 18px);
+  color: variables.$font-color-accent;
 
   @include tablet() {
     font-size: 16px;
@@ -61,7 +61,7 @@
 }
 
 @mixin button-large {
-  @include font-info($font-header, 20px, 26px);
+  @include font-info(variables.$font-header, 20px, 26px);
   @include button-base;
   padding: 10px;
 
@@ -73,7 +73,7 @@
 }
 
 @mixin button-small {
-  @include font-info($font-header, 16px, 20px);
+  @include font-info(variables.$font-header, 16px, 20px);
   @include button-base;
   padding: 10px;
 }

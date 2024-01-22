@@ -2,7 +2,7 @@
 @use "../global/mixins.scss";
 
 .button {
-  @include button-base;
+  @include mixins.button-base;
   border: none;
 
   &:disabled {
@@ -11,71 +11,71 @@
 }
 
 .button--primary {
-  @include font-info($font-header, 16px, 20px);
+  @include mixins.font-info(variables.$font-header, 16px, 20px);
   padding: 10px;
   display: block;
   text-align: center;
-  background: $button-color-primary;
-  color: $font-color-alternate;
+  background: variables.$button-color-primary;
+  color: variables.$font-color-alternate;
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 20px;
     line-height: 26px;
     padding: 14px;
   }
 
   &:hover {
-    background: $button-color-primary-hover;
+    background: variables.$button-color-primary-hover;
   }
 
   &:active {
-    color: rgba($font-color-alternate, 0.3);
+    color: rgba(variables.$font-color-alternate, 0.3);
   }
 }
 
 .button--secondary {
-  @include button-small;
+  @include mixins.button-small;
   display: block;
   text-align: center;
-  background: $button-color-primary;
-  color: $font-color-alternate;
+  background: variables.$button-color-primary;
+  color: variables.$font-color-alternate;
 
   &:hover {
-    background: $button-color-primary-hover;
+    background: variables.$button-color-primary-hover;
   }
 
   &:active {
-    color: rgba($font-color-alternate, 0.3);
+    color: rgba(variables.$font-color-alternate, 0.3);
   }
 }
 
 .button--accent {
-  @include button-small;
+  @include mixins.button-small;
   display: block;
   text-align: center;
-  background-color: $button-color-alternate;
-  color: $font-color-accent;
+  background-color: variables.$button-color-alternate;
+  color: variables.$font-color-accent;
 
   &:hover {
-    background-color: $button-color-alternate-hover;
+    background-color: variables.$button-color-alternate-hover;
   }
 
   &:active {
-    background-color: $button-color-alternate-hover;
+    background-color: variables.$button-color-alternate-hover;
   }
 }
 
 .button--link {
-  @include button-base;
-  @include font-info($font-header, 16px, 16px);
+  @include mixins.button-base;
+  @include mixins.font-info(variables.$font-header, 16px, 16px);
   display: inline-block;
-  color: $font-color-primary;
+  color: variables.$font-color-primary;
 
   &:active {
-    color: rgba($font-color-primary, 0.3);
+    color: rgba(variables.$font-color-primary, 0.3);
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 20px;
     line-height: normal;
   }

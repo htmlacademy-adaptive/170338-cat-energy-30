@@ -7,7 +7,7 @@
 }
 
 .page__body {
-  @include font-info($font-header, 16px, 18px);
+  @include mixins.font-info(variables.$font-header, 16px, 18px);
   font-style: normal;
   font-weight: 400;
   margin: 0;
@@ -16,10 +16,10 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background-color: $background-color-primary;
-  color: $font-color-primary;
+  background-color: variables.$background-color-primary;
+  color: variables.$font-color-primary;
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 20px;
     line-height: 20px;
   }
@@ -29,15 +29,15 @@
   max-width: 1220px;
   margin: 0 auto;
 
-  @include mobile {
+  @include mixins.mobile {
     padding: 0 20px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     padding: 0 30px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding: 0;
   }
 }

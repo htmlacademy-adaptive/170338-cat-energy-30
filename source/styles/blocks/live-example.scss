@@ -2,30 +2,30 @@
 @use "../global/mixins.scss";
 
 .live-example {
-  @include mobile {
+  @include mixins.mobile {
     padding-top: 25px;
-    background-color: $background-color-alternate-accent;
+    background-color: variables.$background-color-alternate-accent;
   }
 
-  @include tablet {
-    background-color: $background-color-primary;
-    background-image: linear-gradient($background-color-transparent 0 619px, $background-color-alternate-accent 619px 100%);
+  @include mixins.tablet {
+    background-color: variables.$background-color-primary;
+    background-image: linear-gradient(variables.$background-color-transparent 0 619px, variables.$background-color-alternate-accent 619px 100%);
   }
 
-  @include desktop {
-    background-color: $background-color-primary;
-    background-image: linear-gradient($background-color-transparent 0 156px, $background-color-alternate-accent 156px 100%);
+  @include mixins.desktop {
+    background-color: variables.$background-color-primary;
+    background-image: linear-gradient(variables.$background-color-transparent 0 156px, variables.$background-color-alternate-accent 156px 100%);
   }
 }
 
 .live-example__container {
   display: grid;
 
-  @include mobile {
+  @include mixins.mobile {
     padding-bottom: 40px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     grid-template-columns: 2fr 1fr;
     row-gap: 20px;
     column-gap: 30px;
@@ -33,7 +33,7 @@
     padding-bottom: 101px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     grid-template-columns: auto 560px;
     column-gap: 224px;
     padding-top: 20px;
@@ -44,35 +44,35 @@
 .live-example__title {
   margin: 0;
 
-  @include mobile {
+  @include mixins.mobile {
     margin-bottom: 40px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     grid-column: 1/-1;
     margin-bottom: 40px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     grid-column: 1/2;
     margin-bottom: 126px;
   }
 }
 
 .live-example__description {
-  @include text-description;
+  @include mixins.text-description;
   margin: 0;
 
-  @include mobile {
+  @include mixins.mobile {
     margin-bottom: 20px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     grid-column: 1/-1;
     margin-bottom: 35px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     grid-column: 1/2;
     margin-bottom: 49px;
     max-width: 432px;
@@ -83,18 +83,18 @@
   display: grid;
   margin: 0;
 
-  @include mobile {
+  @include mixins.mobile {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
     margin-bottom: 9px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     grid-template-columns: repeat(auto-fill, 162px);
     gap: 43px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     grid-template-columns: repeat(auto-fill, 162px);
     gap: 42px;
     margin-bottom: 13px;
@@ -111,18 +111,18 @@
 }
 
 .live-example__value-result {
-  @include font-info($font-header, 24px, 24px);
+  @include mixins.font-info(variables.$font-header, 24px, 24px);
   margin: 0;
-  border: 1px solid $input-color-border;
+  border: 1px solid variables.$input-color-border;
   text-align: center;
   text-transform: uppercase;
   border-radius: 3px;
 
-  @include mobile {
+  @include mixins.mobile {
     padding: 14px 20px 17px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     padding: 15px 24px 20px 24px;
     font-size: 30px;
     line-height: 37px;
@@ -130,45 +130,45 @@
 }
 
 .live-example__value-description {
-  @include font-info($font-primary, 12px, 12px);
+  @include mixins.font-info(variables.$font-primary, 12px, 12px);
   position: relative;
   top: -10px;
   text-transform: lowercase;
   text-align: center;
   align-self: center;
 
-  @include mobile {
+  @include mixins.mobile {
     max-width: 79px;
-    background-color: $background-color-alternate-accent;
+    background-color: variables.$background-color-alternate-accent;
     padding-left: 10px;
     padding-right: 10px;
   }
 
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 14px;
     line-height: 14px;
-    background-color: $background-color-primary;
+    background-color: variables.$background-color-primary;
     padding-left: 8px;
     padding-right: 8px;
   }
 
-  @include desktop {
-    background-color: $background-color-alternate-accent;
+  @include mixins.desktop {
+    background-color: variables.$background-color-alternate-accent;
   }
 }
 
 .live-example__cost {
-  @include font-info($font-header, 14px, 20px);
+  @include mixins.font-info(variables.$font-header, 14px, 20px);
   margin: 0;
   text-transform: uppercase;
 
-  @include mobile {
+  @include mixins.mobile {
     text-align: center;
     margin-bottom: 20px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 20px;
     line-height: 20px;
     margin-top: 11px;
@@ -178,7 +178,7 @@
     gap: 9px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     text-align: left;
     display: flex;
     flex-direction: row;
@@ -187,13 +187,13 @@
 }
 
 .live-example__slider {
-  @include mobile {
+  @include mixins.mobile {
     margin: 0 auto;
     width: 280px;
     height: 256px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     margin: 0 auto;
     width: 560px;
     height: 512px;
@@ -201,7 +201,7 @@
     margin-top: 68px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-top: 0;
     grid-column: 2 / -1;
     grid-row: 1 / 5;

@@ -2,24 +2,24 @@
 @use "../global/mixins.scss";
 
 .input {
-  @include font-info($font-header, 16px, 18px);
+  @include mixins.font-info(variables.$font-header, 16px, 18px);
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  color: $font-color-accent;
-  background-color: $background-color-primary;
-  border: 1px solid $input-color-border-alternate;
+  color: variables.$font-color-accent;
+  background-color: variables.$background-color-primary;
+  border: 1px solid variables.$input-color-border-alternate;
   border-radius: 0;
   margin: 0;
   box-shadow: none;
   width: 100%;
 
   &::placeholder {
-    color: rgba($font-color-accent, 0.6);
+    color: rgba(variables.$font-color-accent, 0.6);
   }
 
   &:invalid {
-    outline: 2px solid $input-color-invalid;
+    outline: 2px solid variables.$input-color-invalid;
   }
 
   &:disabled {
@@ -27,15 +27,15 @@
   }
 
   &:focus-within {
-    outline: $font-color-accent auto 5px;
+    outline: variables.$font-color-accent auto 5px;
   }
 
-  @include mobile {
+  @include mixins.mobile {
     min-height: 45px;
     padding: 10px 15px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     min-height: 52px;
     font-size: 20px;
     line-height: 20px;
@@ -44,7 +44,7 @@
 }
 
 .input--with-icon {
-  @include mobile {
+  @include mixins.mobile {
     padding: 10px 40px 10px 13px;
   }
 }
@@ -58,11 +58,11 @@
   min-width: 30px;
   min-height: 30px;
   width: 30px;
-  border: 1px solid $input-color-border;
+  border: 1px solid variables.$input-color-border;
   border-radius: 50%;
   padding: 0;
 
-  @include tablet {
+  @include mixins.tablet {
     width: 40px;
   }
 
@@ -76,11 +76,11 @@
     margin: auto;
     width: 13px;
     aspect-ratio: 1;
-    background-color: $button-color-primary;
+    background-color: variables.$button-color-primary;
     border-radius: 50%;
     display: none;
 
-    @include tablet {
+    @include mixins.tablet {
       width: 18px;
     }
   }
@@ -100,10 +100,10 @@
   min-width: 30px;
   min-height: 30px;
   width: 30px;
-  border: 1px solid $input-color-border;
+  border: 1px solid variables.$input-color-border;
   padding: 0;
 
-  @include tablet {
+  @include mixins.tablet {
     width: 40px;
   }
 
@@ -123,7 +123,7 @@
     background-size: contain;
     display: none;
 
-    @include tablet {
+    @include mixins.tablet {
       width: 25px;
       height: 25px;
     }

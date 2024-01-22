@@ -2,37 +2,37 @@
 @use "../global/mixins.scss";
 
 .site-list {
-  @include font-info($font-header, 20px, 20px);
-  @include list-base;
+  @include mixins.font-info(variables.$font-header, 20px, 20px);
+  @include mixins.list-base;
   font-family: inherit;
   text-transform: uppercase;
   display: flex;
   flex-wrap: wrap;
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 18px;
     line-height: 24px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     font-size: 20px;
     line-height: normal;
   }
 }
 
 .site-list__item {
-  @include mobile {
+  @include mixins.mobile {
     &:first-child .site-list__link {
-      border-top: 1px solid $border-color-alternate;
+      border-top: 1px solid variables.$border-color-alternate;
     }
   }
 }
 
 .site-list__item--active .site-list__link::before {
-  @include tablet {
+  @include mixins.tablet {
     content: "";
     position: absolute;
-    background-color: $background-color-accent;
+    background-color: variables.$background-color-accent;
     height: 2px;
     bottom: 5px;
     left: 0;
@@ -41,8 +41,8 @@
 }
 
 .site-list__item--active-alternate .site-list__link::before {
-  @include desktop {
-    background-color: $background-color-primary;
+  @include mixins.desktop {
+    background-color: variables.$background-color-primary;
   }
 }
 
@@ -50,47 +50,47 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: $font-color-primary;
+  color: variables.$font-color-primary;
   position: relative;
 
   &:hover {
-    color: rgba($font-color-primary, 0.6);
+    color: rgba(variables.$font-color-primary, 0.6);
   }
 
   &:active {
-    color: rgba($font-color-primary, 0.3);
+    color: rgba(variables.$font-color-primary, 0.3);
   }
 
-  @include mobile {
+  @include mixins.mobile {
     display: block;
-    background-color: $background-color-primary;
-    color: $font-color-primary;
+    background-color: variables.$background-color-primary;
+    color: variables.$font-color-primary;
     padding: 22px 20px 23px;
-    border-bottom: 1px solid $border-color-alternate;
+    border-bottom: 1px solid variables.$border-color-alternate;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     padding-top: 12px;
     padding-bottom: 12px;
     margin-left: 17px;
     margin-right: 17px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-left: 16px;
   }
 }
 
 .site-list__link--alternate {
-  @include desktop {
-    color: $font-color-alternate;
+  @include mixins.desktop {
+    color: variables.$font-color-alternate;
 
     &:hover {
-      color: rgba($font-color-alternate, 0.6);
+      color: rgba(variables.$font-color-alternate, 0.6);
     }
 
     &:active {
-      color: rgba($font-color-alternate, 0.3);
+      color: rgba(variables.$font-color-alternate, 0.3);
     }
   }
 }

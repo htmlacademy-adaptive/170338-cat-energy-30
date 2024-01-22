@@ -8,17 +8,17 @@
 .additional__container {
   position: relative;
 
-  @include mobile {
+  @include mixins.mobile {
     margin-top: 17px;
     margin-bottom: 35px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     margin-top: 70px;
     margin-bottom: 76px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-top: 73px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -28,26 +28,26 @@
 }
 
 .additional__title {
-  @include font-info($font-header, 24px, 37px);
+  @include mixins.font-info(variables.$font-header, 24px, 37px);
   display: block;
-  background-color: $background-color-primary;
+  background-color: variables.$background-color-primary;
   margin: 0;
   padding: 0 23px 0 0;
   width: fit-content;
   grid-column: 1/-1;
 
-  @include mobile {
+  @include mixins.mobile {
     margin-bottom: 29px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 80px;
     padding: 0 40px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-left: -40px;
     margin-bottom: 80px;
   }
@@ -58,11 +58,11 @@
   height: 2px;
   width: 100%;
   position: absolute;
-  background-color: $background-color-accent;
+  background-color: variables.$background-color-accent;
   z-index: -1;
   top: 22px;
 
-  @include tablet {
+  @include mixins.tablet {
     width: 100vw;
     left: 50%;
     transform: translateX(-50%);
@@ -70,18 +70,18 @@
 }
 
 .additional__list {
-  @include list-base;
+  @include mixins.list-base;
   display: grid;
 
-  @include mobile {
+  @include mixins.mobile {
     margin-bottom: 35px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     margin-bottom: 68px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     grid-column: 1/4;
   }
 }
@@ -89,66 +89,66 @@
 .additional__item {
   display: grid;
 
-  @include mobile {
+  @include mixins.mobile {
     padding-top: 14px;
     padding-bottom: 19px;
     row-gap: 13px;
-    border-top: 1px solid $input-color-border;
+    border-top: 1px solid variables.$input-color-border;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     padding: 24px 37px 29px;
-    border: 1px solid $input-color-border;
+    border: 1px solid variables.$input-color-border;
     border-bottom: 0;
     grid-template-columns: 1fr 1fr;
     row-gap: 21px;
     column-gap: 60px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 80px;
     align-items: center;
     border: 0;
-    border-top: 1px solid $input-color-border;
+    border-top: 1px solid variables.$input-color-border;
     padding: 15px 0 15px;
   }
 }
 
 .additional__item:last-child {
-  border-bottom: 1px solid $input-color-border;
+  border-bottom: 1px solid variables.$input-color-border;
 }
 
 .additional__item-title {
-  @include font-info($font-header, 16px, 16px);
+  @include mixins.font-info(variables.$font-header, 16px, 16px);
   text-transform: uppercase;
   margin: 0;
-  color: $font-color-primary-alternate-accent;
+  color: variables.$font-color-primary-alternate-accent;
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 20px;
     line-height: 20px;
     text-align: left;
     margin-bottom: 4px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-bottom: 3px;
   }
 }
 
 .additional__item-description {
-  @include font-info($font-primary, 14px, 14px);
-  color: $font-color-accent;
+  @include mixins.font-info(variables.$font-primary, 14px, 14px);
+  color: variables.$font-color-accent;
   display: grid;
   margin: 0;
   column-gap: 10px;
 
-  @include mobile {
+  @include mixins.mobile {
     grid-template-columns: auto min-content;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 16px;
     line-height: 20px;
     text-align: left;
@@ -156,7 +156,7 @@
     margin-top: 4px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     grid-template-columns: auto 100px;
     margin-right: -70px;
     margin-top: 6px;
@@ -164,33 +164,33 @@
 }
 
 .additional__item-description-name {
-  @include tablet {
+  @include mixins.tablet {
     text-align: right;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-left: 0;
     text-align: left;
   }
 }
 
 .additional__item-description-ammount {
-  @include tablet {
+  @include mixins.tablet {
     text-align: right;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-left: 29px;
     text-align: left;
   }
 }
 
 .additional__button {
-  @include tablet {
+  @include mixins.tablet {
     grid-column: 1/-1;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     grid-column: auto;
   }
 }

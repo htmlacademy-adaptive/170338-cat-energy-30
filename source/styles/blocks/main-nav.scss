@@ -10,8 +10,8 @@
   cursor: pointer;
   position: absolute;
   display: block;
-  background-color: $background-color-transparent;
-  color: $font-color-primary;
+  background-color: variables.$background-color-transparent;
+  color: variables.$font-color-primary;
   border: none;
   right: 0;
   top: 0;
@@ -29,7 +29,7 @@
     opacity: 0.6;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     display: none;
   }
 }
@@ -40,10 +40,10 @@
   transform: translateX(-50%);
   width: 24px;
   height: 2px;
-  background-color: $font-color-primary;
+  background-color: variables.$font-color-primary;
   box-shadow:
-    0 8px 0 0 $font-color-primary,
-    0 -8px 0 0 $font-color-primary;
+    0 8px 0 0 variables.$font-color-primary,
+    0 -8px 0 0 variables.$font-color-primary;
 }
 
 .main-nav__toggle--opened::before,
@@ -52,7 +52,7 @@
   position: absolute;
   width: 24px;
   height: 2px;
-  background-color: $font-color-primary;
+  background-color: variables.$font-color-primary;
 }
 
 .main-nav__toggle--opened::after {
@@ -64,20 +64,20 @@
 }
 
 .main-nav__wrapper {
-  @include mobile {
+  @include mixins.mobile {
     width: 100%;
     right: 0;
     position: absolute;
     z-index: 1;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     position: relative;
   }
 }
 
 .main-nav__toggle--closed ~ .main-nav__wrapper {
-  @include mobile {
+  @include mixins.mobile {
     visibility: hidden;
     opacity: 0;
     transition: opacity 300ms linear, visibility 0s linear 500ms;
@@ -86,7 +86,7 @@
 
 
 .main-nav__toggle--opened ~ .main-nav__wrapper {
-  @include mobile {
+  @include mixins.mobile {
     visibility: visible;
     opacity: 1;
     transition: opacity 300ms linear, visibility 0s linear;
@@ -97,11 +97,11 @@
   display: flex;
   flex-wrap: wrap;
 
-  @include mobile {
+  @include mixins.mobile {
     flex-direction: column;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     max-width: 500px;
     flex-direction: row;
     align-items: baseline;
@@ -109,12 +109,12 @@
     margin-right: -14px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     max-width: 600px;
   }
 }
 
-@include mobile {
+@include mixins.mobile {
   .main-nav--no-js {
     .main-nav__toggle {
       visibility: hidden;
