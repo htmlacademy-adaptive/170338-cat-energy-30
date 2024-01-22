@@ -6,42 +6,42 @@
 }
 
 .contacts--alternate {
-  background-color: $background-color-alternate;
+  background-color: variables.$background-color-alternate;
 }
 
 .contacts__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @include mobile {
+  @include mixins.mobile {
     padding-top: 26px;
     padding-bottom: 26px;
     margin: 0 auto;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     padding: 60px 40px 62px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     position: absolute;
     z-index: 4;
     top: 95px;
     padding: 59px 80px;
     max-width: 565px;
     min-width: 565px;
-    background-color: $background-color-primary;
+    background-color: variables.$background-color-primary;
     column-gap: 92px;
   }
 }
 
 .contacts__title {
-  @include font-info($font-header, 16px, 20px);
+  @include mixins.font-info(variables.$font-header, 16px, 20px);
   text-transform: uppercase;
   margin: 0;
-  color: $font-color-primary-alternate;
+  color: variables.$font-color-primary-alternate;
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 20px;
     line-height: 26px;
     max-width: 165px;
@@ -51,17 +51,17 @@
 .contacts__address-description {
   margin: 0;
 
-  @include tablet {
+  @include mixins.tablet {
     text-align: right;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     text-align: left;
   }
 }
 
 .contacts__address-description--city {
-  @include tablet {
+  @include mixins.tablet {
     margin-top: 20px;
   }
 }
@@ -71,10 +71,10 @@
 }
 
 .contacts__address {
-  @include font-info($font-primary, 14px, 20px);
-  color: $font-color-accent;
+  @include mixins.font-info(variables.$font-primary, 14px, 20px);
+  color: variables.$font-color-accent;
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 16px;
   }
 }
@@ -97,11 +97,11 @@
   border: 0;
   z-index: 2;
 
-  @include mobile {
+  @include mixins.mobile {
     height: 362px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     height: 400px;
   }
 }

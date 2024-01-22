@@ -2,7 +2,7 @@
 @use "../global/mixins.scss";
 
 .hero {
-  @include mobile {
+  @include mixins.mobile {
     position: relative;
   }
 }
@@ -11,18 +11,18 @@
   display: flex;
   flex-direction: column;
 
-  @include mobile {
+  @include mixins.mobile {
     padding-top: 27px;
     padding-bottom: 20px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     padding-left: 90px;
     padding-right: 90px;
     padding-top: 65px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     min-height: 596px;
     margin-bottom: 65px;
     padding-left: 80px;
@@ -31,16 +31,16 @@
 }
 
 .hero__title {
-  @include font-info($font-header, 36px, 36px);
+  @include mixins.font-info(variables.$font-header, 36px, 36px);
   margin: 0;
 
-  @include mobile {
-    color: $font-color-alternate;
+  @include mixins.mobile {
+    color: variables.$font-color-alternate;
     text-align: center;
     margin-bottom: 25px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 60px;
     line-height: 60px;
     max-width: 420px;
@@ -50,23 +50,23 @@
 }
 
 .hero__description {
-  @include font-info($font-header, 14px, 14px);
+  @include mixins.font-info(variables.$font-header, 14px, 14px);
   text-transform: uppercase;
 
-  @include mobile {
-    color: $font-color-alternate;
+  @include mixins.mobile {
+    color: variables.$font-color-alternate;
     text-align: center;
     margin-top: 0;
     margin-bottom: 29px;
   }
 
-  @include tablet {
-    @include font-info($font-header, 20px, 20px);
+  @include mixins.tablet {
+    @include mixins.font-info(variables.$font-header, 20px, 20px);
     margin-top: 0;
     margin-bottom: 49px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-bottom: 52px;
   }
 }
@@ -74,19 +74,19 @@
 .hero__image {
   display: block;
 
-  @include mobile {
+  @include mixins.mobile {
     min-width: 280px;
     height: auto;
     margin: 0 auto;
     margin-bottom: 3px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     margin-top: -83px;
     margin-left: -90px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     position: absolute;
     margin: 0;
     top: 143px;
@@ -96,13 +96,13 @@
 }
 
 .hero__button {
-  @include font-info($font-header, 16px, 20px);
+  @include mixins.font-info(variables.$font-header, 16px, 20px);
 
-  @include mobile {
+  @include mixins.mobile {
     order: 3;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 20px;
     line-height: 26px;
     z-index: 1;
@@ -114,7 +114,7 @@
 .hero__decoration {
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: $background-color-accent;
+  background-color: variables.$background-color-accent;
 
   &::before {
     position: absolute;
@@ -123,10 +123,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba($background-color-accent, 0.85);
+    background-color: rgba(variables.$background-color-accent, 0.85);
   }
 
-  @include mobile {
+  @include mixins.mobile {
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -150,11 +150,11 @@
     }
   }
 
-  @include tablet {
+  @include mixins.tablet {
     display: none;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     position: absolute;
     z-index: -1;
     display: block;

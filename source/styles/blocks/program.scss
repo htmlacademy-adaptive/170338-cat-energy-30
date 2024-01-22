@@ -6,31 +6,31 @@
 }
 
 .program__container {
-  @include mobile {
+  @include mixins.mobile {
     padding-top: 28px;
     padding-bottom: 32px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     padding-top: 30px;
     padding-bottom: 60px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding-top: 40px;
     padding-bottom: 80px;
   }
 }
 
 .program__title {
-  @include font-info($font-header, 36px, 36px);
+  @include mixins.font-info(variables.$font-header, 36px, 36px);
   margin: 0;
 
-  @include mobile {
+  @include mixins.mobile {
     margin-bottom: 38px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 60px;
     line-height: 60px;
     margin-top: 34px;
@@ -38,22 +38,22 @@
     margin-left: 40px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-bottom: 54px;
     margin-left: 0;
   }
 }
 
 .program__description {
-  @include font-info($font-header, 14px, 18px);
+  @include mixins.font-info(variables.$font-header, 14px, 18px);
   text-transform: uppercase;
 
-  @include mobile {
+  @include mixins.mobile {
     margin-bottom: 38px;
     max-width: 226px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 65px;
@@ -61,7 +61,7 @@
     margin-left: 41px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-left: 0;
   }
 }

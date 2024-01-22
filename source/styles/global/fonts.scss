@@ -1,2 +1,4 @@
-@include font-face("Oswald", 400, normal, url("../../fonts/oswald-400.woff2") format("woff2"), url("../fonts/oswald-400.woff") format("woff"));
-@include font-face("Lato", 400, normal, url("../../fonts/lato-400.woff2") format("woff2"), url("../fonts/lato-400.woff") format("woff"));
+@use "../global/mixins.scss";
+
+@include mixins.font-face("Oswald", 400, normal, url("../../fonts/oswald-400.woff2") format("woff2"), url("../fonts/oswald-400.woff") format("woff"));
+@include mixins.font-face("Lato", 400, normal, url("../../fonts/lato-400.woff2") format("woff2"), url("../fonts/lato-400.woff") format("woff"));

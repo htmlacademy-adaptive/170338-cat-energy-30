@@ -2,25 +2,25 @@
 @use "../global/mixins.scss";
 
 .header {
-  background-color: $background-color-primary;
+  background-color: variables.$background-color-primary;
 
-  @include mobile {
+  @include mixins.mobile {
     min-height: 65px;
   }
 
-  @include desktop {
-    background-color: $background-color-transparent;
+  @include mixins.desktop {
+    background-color: variables.$background-color-transparent;
   }
 }
 
 .header__container {
   position: relative;
 
-  @include mobile {
+  @include mixins.mobile {
     z-index: 3;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -28,14 +28,14 @@
     align-items: center;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding-top: 55px;
   }
 }
 
 .header__container--accent {
-  @include mobile {
-    border-bottom: 1px solid $border-color-primary;
+  @include mixins.mobile {
+    border-bottom: 1px solid variables.$border-color-primary;
   }
 }
 
@@ -46,7 +46,7 @@
   text-decoration: none;
   cursor: pointer;
 
-  @include mobile {
+  @include mixins.mobile {
     padding-top: 13px;
     padding-bottom: 12px;
     margin-right: 40px;
@@ -65,7 +65,7 @@
 .header__logo-title {
   display: block;
 
-  @include mobile {
+  @include mixins.mobile {
     position: absolute;
     margin: 0 auto;
     min-width: 101px;
@@ -75,13 +75,13 @@
     top: 23px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     margin-left: 13px;
     min-width: 101px;
     height: auto;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-left: 14px;
     min-width: 118px;
   }

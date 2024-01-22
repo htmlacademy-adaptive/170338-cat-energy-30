@@ -5,61 +5,61 @@
   position: relative;
   padding-bottom: 49px;
 
-  @include tablet {
+  @include mixins.tablet {
     padding-top: 45px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding-top: 71px;
   }
 }
 
 .how-it-work::after {
-  @include tablet {
+  @include mixins.tablet {
     content: "";
     display: block;
     position: absolute;
     bottom: 0;
     height: 1px;
     width: 100%;
-    background-color: $border-color-alternate;
+    background-color: variables.$border-color-alternate;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     display: none;
   }
 }
 
 .how-it-work__list {
-  @include list-base;
+  @include mixins.list-base;
   display: grid;
   gap: 20px;
   counter-reset: how-it-work-counter;
 
-  @include tablet {
+  @include mixins.tablet {
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
     row-gap: 37px;
     margin-top: 32px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
   }
 }
 
 .how-it-work__item {
-  @include text-description;
+  @include mixins.text-description;
   display: grid;
   position: relative;
 
-  @include mobile {
+  @include mixins.mobile {
     grid-template-columns: 60px auto;
     gap: 20px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     display: block;
     padding: 40px 0;
     min-height: 280px;
@@ -70,7 +70,7 @@
   margin: 0;
   align-self: center;
 
-  @include tablet {
+  @include mixins.tablet {
     max-width: 243px;
   }
 }
@@ -81,25 +81,25 @@
   background-size: initial;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: $background-color-accent;
+  background-color: variables.$background-color-accent;
   aspect-ratio: 1;
 
-  @include mobile {
+  @include mixins.mobile {
     width: 60px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     width: 80px;
     margin-bottom: 31px;
   }
 }
 
 .how-it-work__item::after {
-  @include tablet {
-    @include font-info($font-header, 280px, 280px);
+  @include mixins.tablet {
+    @include mixins.font-info(variables.$font-header, 280px, 280px);
     counter-increment: how-it-work-counter;
     content: counter(how-it-work-counter);
-    color: $background-color-alternate;
+    color: variables.$background-color-alternate;
     position: absolute;
     min-width: 134px;
     right: 75px;
@@ -107,7 +107,7 @@
     z-index: -1;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     right: -5px;
   }
 }
@@ -133,7 +133,7 @@
 }
 
 .how-it-work__title {
-  @include mobile {
+  @include mixins.mobile {
     margin-top: 20px;
     margin-bottom: 40px;
   }

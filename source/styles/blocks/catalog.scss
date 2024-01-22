@@ -2,28 +2,28 @@
 @use "../global/mixins.scss";
 
 .catalog__container {
-  @include mobile {
+  @include mixins.mobile {
     padding-top: 28px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     padding-top: 65px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding-top: 73px;
   }
 }
 
 .catalog__title {
-  @include font-info($font-header, 36px, 36px);
+  @include mixins.font-info(variables.$font-header, 36px, 36px);
   margin: 0;
 
-  @include mobile {
+  @include mixins.mobile {
     margin-bottom: 41px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 84px;
@@ -31,15 +31,15 @@
 }
 
 .catalog__list {
-  @include list-base;
+  @include mixins.list-base;
 
-  @include tablet {
+  @include mixins.tablet {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
     gap: 60px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     column-gap: 80px;
     row-gap: 62px;
   }

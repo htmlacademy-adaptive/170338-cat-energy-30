@@ -2,7 +2,7 @@
 @use "../global/mixins.scss";
 
 .social__list {
-  @include list-base;
+  @include mixins.list-base;
 
   display: flex;
   flex-wrap: wrap;
@@ -14,13 +14,13 @@
   display: block;
   min-width: 28px;
   min-height: 22px;
-  color: $icons-color-primary;
+  color: variables.$icons-color-primary;
 
   &:hover {
-    color: $button-color-primary;
+    color: variables.$button-color-primary;
   }
 
   &:active {
-    color: rgba($button-color-primary, 0.3);
+    color: rgba(variables.$button-color-primary, 0.3);
   }
 }

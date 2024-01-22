@@ -2,18 +2,18 @@
 @use "../global/mixins.scss";
 
 .footer {
-  background-color: $background-color-alternate;
+  background-color: variables.$background-color-alternate;
 }
 
 .footer__container {
-  @include mobile {
+  @include mixins.mobile {
     display: flex;
     padding-top: 40px;
     padding-bottom: 40px;
     flex-direction: column;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     padding-top: 54px;
     padding-bottom: 57px;
     display: grid;
@@ -21,20 +21,20 @@
     align-items: center;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding-top: 67px;
   }
 }
 
 .footer__logo {
-  @include mobile {
+  @include mixins.mobile {
     align-self: center;
     padding-bottom: 17px;
   }
 }
 
 .footer__logo-title {
-  color: $font-color-primary-alternate;
+  color: variables.$font-color-primary-alternate;
 
   &:hover {
     opacity: 0.8;
@@ -46,31 +46,31 @@
 }
 
 .footer__social {
-  @include mobile {
+  @include mixins.mobile {
     padding-top: 20px;
     padding-bottom: 17px;
-    border-top: 1px solid $border-color-secondary;
-    border-bottom: 1px solid $border-color-secondary;
+    border-top: 1px solid variables.$border-color-secondary;
+    border-bottom: 1px solid variables.$border-color-secondary;
   }
 }
 
 .footer__developer {
   position: relative;
 
-  @include mobile {
+  @include mixins.mobile {
     margin-top: 20px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     justify-self: end;
   }
 }
 
 .footer__developer-link {
-  @include font-info($font-primary, 16px, 18px);
+  @include mixins.font-info(variables.$font-primary, 16px, 18px);
   display: flex;
   align-items: center;
-  color: $font-color-accent;
+  color: variables.$font-color-accent;
   text-decoration: none;
 
   &:active {
@@ -79,14 +79,14 @@
 
   &:hover::after,
   &:active::after {
-    background-color: $button-color-primary;
+    background-color: variables.$button-color-primary;
   }
 
-  @include mobile {
+  @include mixins.mobile {
     justify-content: space-between;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     gap: 23px;
   }
 }
@@ -96,9 +96,9 @@
   display: inline-block;
   width: 27px;
   height: 34px;
-  color: $font-color-accent;
+  color: variables.$font-color-accent;
   mask-image: url("../../images/icons/stack.svg#developer-icon");
   mask-position: center;
   mask-repeat: no-repeat;
-  background-color: $font-color-accent;
+  background-color: variables.$font-color-accent;
 }

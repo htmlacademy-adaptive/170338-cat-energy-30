@@ -4,7 +4,7 @@
 .catalog-card {
   position: relative;
 
-  @include mobile {
+  @include mixins.mobile {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content 1fr 40px;
@@ -13,46 +13,46 @@
     padding-bottom: 25px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     display: flex;
     flex-direction: column;
     min-height: 430px;
     padding: 37px 37px 40px;
-    background-color: $background-color-alternate;
+    background-color: variables.$background-color-alternate;
     margin-top: 81px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding-bottom: 43px;
   }
 }
 
 .catalog-card::before {
-  @include mobile {
+  @include mixins.mobile {
     content: "";
     position: absolute;
     height: 1px;
     top: 0;
     left: -20px;
     right: -20px;
-    background-color: $border-color-primary;
+    background-color: variables.$border-color-primary;
   }
 }
 
 .catalog-card__image-wrapper {
   display: flex;
 
-  @include mobile {
+  @include mixins.mobile {
     grid-row: span 2;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     height: 210px;
     margin-bottom: 9px;
     margin-top: -95px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-bottom: 0;
   }
 }
@@ -64,53 +64,53 @@
   max-width: 100%;
   width: auto;
 
-  @include mobile {
+  @include mixins.mobile {
     align-self: center;
   }
 }
 
 .catalog-card__image-small {
-  @include mobile {
+  @include mixins.mobile {
     margin-bottom: 8px;
     align-self: center;
     max-height: 100%;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     margin-top: 6px;
     height: 172px;
   }
 }
 
 .catalog-card__image-large {
-  @include mobile {
+  @include mixins.mobile {
     align-self: flex-end;
     height: 100px;
     margin-bottom: 10px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     margin-top: -12px;
     height: 206px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-top: -6px;
     height: 197px;
   }
 }
 
 .catalog-card__title {
-  @include font-info($font-header, 16px, 20px);
+  @include mixins.font-info(variables.$font-header, 16px, 20px);
   text-transform: uppercase;
-  color: $font-color-primary-alternate-accent;
+  color: variables.$font-color-primary-alternate-accent;
   margin: 0;
 
-  @include mobile {
+  @include mixins.mobile {
     max-width: 60%;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 20px;
     line-height: 24px;
     text-align: center;
@@ -119,40 +119,40 @@
 }
 
 .catalog-card__title-size {
-  @include tablet {
+  @include mixins.tablet {
     display: block;
   }
 }
 
 .catalog-card__button {
-  @include mobile {
+  @include mixins.mobile {
     grid-column: 1 / -1;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     margin-top: auto;
   }
 }
 
 .catalog-card__button--more {
-  @include tablet {
+  @include mixins.tablet {
     margin-top: auto;
   }
 }
 
 .catalog-card__info {
-  @include font-info($font-primary, 12px, 16px);
-  color: $font-color-accent;
+  @include mixins.font-info(variables.$font-primary, 12px, 16px);
+  color: variables.$font-color-accent;
   display: flex;
   flex-direction: column;
   margin: 0;
 
-  @include mobile {
+  @include mixins.mobile {
     margin-top: 3px;
     margin-bottom: 8px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 33px;
@@ -160,15 +160,15 @@
 }
 
 .catalog-card__description {
-  @include font-info($font-primary, 12px, 16px);
+  @include mixins.font-info(variables.$font-primary, 12px, 16px);
   margin: 0 auto;
   text-align: center;
 
-  @include mobile {
+  @include mixins.mobile {
     margin-bottom: 21px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 16px;
     line-height: 18px;
     max-width: 170px;
@@ -180,12 +180,12 @@
   justify-content: space-between;
   gap: 20px;
 
-  @include tablet {
+  @include mixins.tablet {
     padding: 7px 0 3px;
-    border-bottom: 1px solid $input-color-border;
+    border-bottom: 1px solid variables.$input-color-border;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding: 8px 0 5px;
 
     &:last-child {
@@ -200,34 +200,34 @@
   flex-direction: column;
   gap: 0;
 
-  @include tablet {
-    border: 2px solid $background-color-alternate;
-    background-color: $background-color-primary;
+  @include mixins.tablet {
+    border: 2px solid variables.$background-color-alternate;
+    background-color: variables.$background-color-primary;
     padding: 37px 37px 40px;
     padding-top: 50px;
   }
 }
 
 .catalog-card__title--show-more {
-  color: $font-color-primary-alternate;
+  color: variables.$font-color-primary-alternate;
   max-width: 100%;
   margin: 0 auto;
 
-  @include mobile {
+  @include mixins.mobile {
     margin-bottom: 8px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     margin-bottom: 9px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-bottom: 11px;
   }
 }
 
 .catalog-card__title--additional {
-  @include tablet {
+  @include mixins.tablet {
     display: block;
     margin-left: 4px;
   }
@@ -243,7 +243,7 @@
     content: "";
     width: 100%;
     height: 2px;
-    background-color: $icons-color-secondary;
+    background-color: variables.$icons-color-secondary;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -253,21 +253,21 @@
     transform: translateY(-50%) rotate(90deg);
   }
 
-  @include mobile {
+  @include mixins.mobile {
     width: 30px;
     height: 30px;
     margin-top: 5px;
     margin-bottom: 23px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     width: 60px;
     height: 60px;
     background-size: 60px;
     margin-bottom: 48px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-bottom: 37px;
   }
 }

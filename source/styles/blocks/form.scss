@@ -2,7 +2,7 @@
 @use "../global/mixins.scss";
 
 .form {
-  @include desktop {
+  @include mixins.desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
@@ -17,7 +17,7 @@
   padding: 0;
   position: relative;
 
-  @include tablet {
+  @include mixins.tablet {
     padding: 0 40px;
   }
 }
@@ -25,25 +25,25 @@
 .form__group--base-info {
   display: grid;
 
-  @include mobile {
+  @include mixins.mobile {
     gap: 14px;
     margin-bottom: 24px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     gap: 18px;
     margin-bottom: 72px;
     padding-right: 38px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin: 0;
     padding: 0;
   }
 }
 
 .form__group--program {
-  @include mobile {
+  @include mixins.mobile {
     margin-bottom: 26px;
     padding-top: 26px;
     padding-bottom: 24px;
@@ -55,7 +55,7 @@
       height: 1px;
       position: absolute;
       left: -20px;
-      background-color: $border-color-secondary;
+      background-color: variables.$border-color-secondary;
     }
 
     &::before {
@@ -68,12 +68,12 @@
     }
   }
 
-  @include tablet {
+  @include mixins.tablet {
     margin-bottom: 64px;
     padding-right: 38px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin: 0;
     padding: 0;
     align-self: center;
@@ -83,18 +83,18 @@
 .form__group--contacts {
   display: grid;
 
-  @include mobile {
+  @include mixins.mobile {
     gap: 14px;
     margin-bottom: 24px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     gap: 19px;
     margin-bottom: 64px;
     padding-right: 38px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     display: grid;
     grid-column: 1/-1;
     grid-template-columns: 1fr 1fr;
@@ -106,16 +106,16 @@
 }
 
 .form__group--comments {
-  @include mobile {
+  @include mixins.mobile {
     margin-bottom: 24px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     margin-bottom: 66px;
     padding-right: 39px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     grid-column: 1/-1;
     margin: 0;
     padding: 0;
@@ -126,11 +126,11 @@
 .form__group--additional {
   margin-bottom: 38px;
 
-  @include tablet {
+  @include mixins.tablet {
     margin-bottom: 51px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     grid-column: 1/-1;
     margin: 0;
     padding: 0;
@@ -141,17 +141,17 @@
 .form__group--buttons {
   display: grid;
 
-  @include mobile {
+  @include mixins.mobile {
     gap: 21px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     grid-template-columns: 1fr 1fr;
     column-gap: 59px;
     row-gap: 32px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     grid-column: 1/-1;
     column-gap: 80px;
     padding: 0;
@@ -172,45 +172,45 @@
   display: block;
   padding-left: 45px;
 
-  @include mobile {
+  @include mixins.mobile {
     padding: 1px 0 0 45px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     padding: 5px 0 5px 60px;
   }
 }
 
 .form__radio:focus-within {
-  outline: $font-color-accent auto 2px;
+  outline: variables.$font-color-accent auto 2px;
 }
 
 .form__group-list {
-  @include list-base;
+  @include mixins.list-base;
   display: flex;
   flex-direction: column;
 
-  @include mobile {
+  @include mixins.mobile {
     gap: 25px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     display: grid;
   }
 }
 
 .form__group-list--additional {
-  @include mobile {
+  @include mixins.mobile {
     padding-top: 6px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     grid-template-columns: 1fr 1fr;
     column-gap: 61px;
     row-gap: 29px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
@@ -218,14 +218,14 @@
 }
 
 .form__group-list--program {
-  @include tablet {
+  @include mixins.tablet {
     row-gap: 13px;
     padding: 21px 27px;
     padding-bottom: 27px;
-    border: 1px solid $border-color-secondary;
+    border: 1px solid variables.$border-color-secondary;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding-top: 25px;
   }
 }
@@ -236,19 +236,19 @@
 }
 
 .form__title {
-  @include font-info($font-header, 24px, 26px);
+  @include mixins.font-info(variables.$font-header, 24px, 26px);
   display: block;
   margin: 0;
-  background-color: $background-color-primary;
+  background-color: variables.$background-color-primary;
   padding: 0 24px 0 0;
   width: fit-content;
   grid-column: 1/-1;
 
-  @include mobile {
+  @include mixins.mobile {
     max-width: 75%;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 36px;
     line-height: 36px;
     padding: 0 40px;
@@ -262,11 +262,11 @@
   height: 2px;
   width: 100%;
   position: absolute;
-  background-color: $button-color-primary;
+  background-color: variables.$button-color-primary;
   z-index: -1;
   top: 16px;
 
-  @include tablet {
+  @include mixins.tablet {
     width: 100vw;
     top: 22px;
     left: 50%;
@@ -275,69 +275,69 @@
 }
 
 .form__title--contacts {
-  @include mobile {
+  @include mixins.mobile {
     margin-bottom: 20px;
     padding-right: 10px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     margin-bottom: 55px;
     margin-left: -40px;
     padding: 0 40px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding: 3px 40px;
   }
 }
 
 .form__title--comments {
-  @include mobile {
+  @include mixins.mobile {
     margin-bottom: 38px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-bottom: 76px;
   }
 }
 
 .form__title--additional {
-  @include mobile {
+  @include mixins.mobile {
     margin-bottom: 34px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     margin-bottom: 57px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-top: -6px;
     margin-bottom: 56px;
   }
 }
 
 .form__label {
-  @include font-info($font-header, 16px, 18px);
+  @include mixins.font-info(variables.$font-header, 16px, 18px);
   text-transform: uppercase;
-  color: $font-color-accent;
+  color: variables.$font-color-accent;
   max-width: 200px;
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 20px;
     line-height: normal;
   }
 }
 
 .form__control-textarea {
-  @include font-info($font-header, 16px, 18px);
+  @include mixins.font-info(variables.$font-header, 16px, 18px);
   resize: none;
 
-  @include mobile {
+  @include mixins.mobile {
     min-height: 150px;
     padding: 14px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 20px;
     line-height: 30px;
     min-height: 175px;
@@ -345,14 +345,14 @@
 }
 
 .form__requirements {
-  @include font-info($font-primary, 14px, 16px);
+  @include mixins.font-info(variables.$font-primary, 14px, 16px);
   margin: 0;
 
-  @include mobile {
+  @include mixins.mobile {
     text-align: center;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 16px;
     line-height: 16px;
     align-self: center;
@@ -367,21 +367,21 @@
 
 .form__input-icon {
   position: absolute;
-  background-color: $font-color-primary;
+  background-color: variables.$font-color-primary;
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
 
-  @include mobile {
+  @include mixins.mobile {
     right: 12px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     right: 15px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     right: 16px;
   }
 }
@@ -391,7 +391,7 @@
   mask-repeat: no-repeat;
 
   &:invalid {
-    background-color: $input-color-invalid;
+    background-color: variables.$input-color-invalid;
   }
 }
 
@@ -401,11 +401,11 @@
 }
 
 .form__control-input:focus ~ .form__input-icon {
-  background-color: $button-color-primary;
+  background-color: variables.$button-color-primary;
 }
 
 .form__control-input:invalid:not(:focus) ~ .form__input-icon {
-  background-color: $input-color-invalid;
+  background-color: variables.$input-color-invalid;
 }
 
 .form__checkbox {
@@ -413,23 +413,23 @@
   cursor: pointer;
   display: block;
 
-  @include mobile {
+  @include mixins.mobile {
     padding: 0 0 0 46px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     padding: 6px 0 6px 60px;
   }
 }
 
 .form__checkbox:focus-within {
-  outline: $font-color-accent auto 5px;
+  outline: variables.$font-color-accent auto 5px;
 }
 
 .form__button {
   min-height: 40px;
 
-  @include tablet {
+  @include mixins.tablet {
     min-height: 54px;
   }
 }

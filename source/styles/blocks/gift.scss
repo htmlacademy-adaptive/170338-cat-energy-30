@@ -4,10 +4,10 @@
 .gift {
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: $background-color-accent;
+  background-color: variables.$background-color-accent;
   background-position: center;
   position: relative;
-  color: $background-color-primary;
+  color: variables.$background-color-primary;
   display: flex;
   padding: 60px 30px 40px;
 
@@ -18,10 +18,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba($background-color-accent, 0.85);
+    background-color: rgba(variables.$background-color-accent, 0.85);
   }
 
-  @include mobile {
+  @include mixins.mobile {
     min-height: 290px;
     flex-direction: column;
     align-items: center;
@@ -41,7 +41,7 @@
     }
   }
 
-  @include tablet {
+  @include mixins.tablet {
     min-height: 200px;
     flex-direction: row;
     align-self: flex-start;
@@ -62,7 +62,7 @@
     }
   }
 
-  @include desktop {
+  @include mixins.desktop {
     min-height: 288px;
     flex-direction: column;
     align-items: center;
@@ -94,31 +94,31 @@
   background-image: url("../../images/icons/stack.svg#gift-icon");
   z-index: 1;
 
-  @include mobile {
+  @include mixins.mobile {
     margin-top: -5px;
     margin-bottom: 47px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     margin-top: -13px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-top: 0;
   }
 }
 
 .gift__description {
-  @include font-info($font-primary, 16px, 20px);
+  @include mixins.font-info(variables.$font-primary, 16px, 20px);
   margin: 0;
   max-width: 162px;
   z-index: 1;
 
-  @include mobile {
+  @include mixins.mobile {
     text-align: center;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     text-align: center;
   }
 }

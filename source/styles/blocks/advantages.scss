@@ -2,31 +2,31 @@
 @use "../global/mixins.scss";
 
 .advantages__list {
-  @include list-base;
+  @include mixins.list-base;
   display: grid;
   gap: 20px;
 
-  @include tablet {
+  @include mixins.tablet {
     gap: 30px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     grid-template-columns: 1fr 1fr;
     gap: 80px;
   }
 }
 
 .advantages__item {
-  background-color: $background-color-alternate;
+  background-color: variables.$background-color-alternate;
 
-  @include mobile {
+  @include mixins.mobile {
     display: grid;
     grid-template-columns: 50px auto;
     padding: 23px 20px 22px;
     gap: 19px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     padding: 77px 63px 57px 52px;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@
     min-height: 372px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     padding: 47px 61px 59px 52px;
     display: grid;
     grid-template-columns: 100px auto;
@@ -44,23 +44,23 @@
 }
 
 .advantages__item-image {
-  background-color: $background-color-accent;
+  background-color: variables.$background-color-accent;
   border-radius: 50%;
   aspect-ratio: 1;
   position: relative;
 
-  @include mobile {
+  @include mixins.mobile {
     width: 50px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     width: 200px;
     position: absolute;
     top: 92px;
     right: 63px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     position: relative;
     width: 100px;
     right: auto;
@@ -81,7 +81,7 @@
   background-position: center;
   background-image: url("../../images/icons/stack.svg#lean-cat-icon");
 
-  @include tablet {
+  @include mixins.tablet {
     width: 140px;
   }
 }
@@ -99,44 +99,44 @@
   background-position: center;
   background-image: url("../../images/icons/stack.svg#strong-cat-icon");
 
-  @include tablet {
+  @include mixins.tablet {
     transform: translate(-50%, -50%);
     width: 269px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     transform: translate(-51%, -52%);
     width: 134%;
   }
 }
 
 .advantages__item-title {
-  @include font-info($font-header, 24px, 37px);
+  @include mixins.font-info(variables.$font-header, 24px, 37px);
   text-transform: uppercase;
   margin: 0;
 
-  @include mobile {
+  @include mixins.mobile {
     align-self: center;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     font-size: 36px;
     line-height: 36px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     align-self: center;
   }
 }
 
 .advantages__item-description {
-  @include text-description;
+  @include mixins.text-description;
 
   position: relative;
   grid-column: 1/-1;
   margin: 0;
 
-  @include mobile {
+  @include mixins.mobile {
     margin-top: 4px;
     margin-bottom: 23px;
 
@@ -148,17 +148,17 @@
       width: 100%;
       height: 1px;
       bottom: -23px;
-      background-color: $border-color-secondary;
+      background-color: variables.$border-color-secondary;
     }
   }
 
-  @include tablet {
+  @include mixins.tablet {
     margin-top: 24px;
     margin-bottom: 52px;
     margin-right: 250px;
   }
 
-  @include desktop {
+  @include mixins.desktop {
     margin-top: 39px;
     margin-bottom: 27px;
     margin-right: 0;
@@ -171,7 +171,7 @@
   grid-column: 1/-1;
   width: fit-content;
 
-  @include desktop {
+  @include mixins.desktop {
     align-self: end;
   }
 }
@@ -186,15 +186,15 @@
   mask-size: contain;
   mask-position: -8px;
   mask-repeat: no-repeat;
-  background-color: $font-color-primary;
+  background-color: variables.$font-color-primary;
   transition: 0.2s ease-in-out;
 
-  @include mobile {
+  @include mixins.mobile {
     bottom: 3px;
     margin-left: 15px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     bottom: 10px;
     margin-left: 25px;
   }
@@ -205,6 +205,6 @@
 }
 
 .advantages__item-button:active::after {
-  background-color: rgba($font-color-primary, 0.3);
+  background-color: rgba(variables.$font-color-primary, 0.3);
   transition: 0s;
 }

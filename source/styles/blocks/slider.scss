@@ -1,3 +1,5 @@
+@use "../global/variables.scss";
+
 .slider {
   position: relative;
   display: flex;
@@ -43,7 +45,7 @@
   &::before {
     content: "";
     position: absolute;
-    background-color: $icons-color-primary;
+    background-color: variables.$icons-color-primary;
     border-radius: 2px;
     top: 0;
     left: 50%;
@@ -54,25 +56,25 @@
 
   &:hover {
     &::before {
-      background-color: $button-color-primary-hover;
+      background-color: variables.$button-color-primary-hover;
     }
   }
 
   &:active {
     &::before {
-      background-color: rgba($button-color-primary-hover, 0.6);
+      background-color: rgba(variables.$button-color-primary-hover, 0.6);
     }
   }
 }
 
 .slider__button:hover .slider__toggle {
-  border-color: $button-color-primary-hover;
-  color: $button-color-primary-hover;
+  border-color: variables.$button-color-primary-hover;
+  color: variables.$button-color-primary-hover;
 }
 
 .slider__button:active .slider__toggle {
-  border-color: rgba($button-color-primary-hover, 0.6);
-  color: rgba($button-color-primary-hover, 0.6);
+  border-color: rgba(variables.$button-color-primary-hover, 0.6);
+  color: rgba(variables.$button-color-primary-hover, 0.6);
 }
 
 .slider__toggle {
@@ -80,10 +82,10 @@
   padding: 0;
   width: 40px;
   height: 40px;
-  background-color: $background-color-primary;
+  background-color: variables.$background-color-primary;
   border-radius: 50%;
-  border: 2px solid $icons-color-primary;
-  color: $icons-color-primary;
+  border: 2px solid variables.$icons-color-primary;
+  color: variables.$icons-color-primary;
   position: relative;
 }
 
