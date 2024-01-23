@@ -400,12 +400,32 @@
   mask-repeat: no-repeat;
 }
 
+.form__control-input:checked + .form__control-input-radio::before {
+  display: block;
+}
+
+.form__control-input:checked + .form__control-input-mark::before {
+  display: block;
+}
+
 .form__control-input:focus ~ .form__input-icon {
   background-color: variables.$button-color-primary;
 }
 
 .form__control-input:invalid:not(:focus) ~ .form__input-icon {
   background-color: variables.$input-color-invalid;
+}
+
+.form__control-input:disabled + .form__control-input-radio {
+  opacity: 30%;
+}
+
+.form__control-input:disabled + .form__control-input-mark {
+  opacity: 30%;
+}
+
+.form__control-input:disabled ~ .form__label {
+  opacity: 30%;
 }
 
 .form__checkbox {

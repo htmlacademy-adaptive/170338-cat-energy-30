@@ -84,10 +84,6 @@
       width: 18px;
     }
   }
-
-  .form__control-input:checked + &::before {
-    display: block;
-  }
 }
 
 
@@ -128,14 +124,10 @@
       height: 25px;
     }
   }
-
-  .form__control-input:checked + &::before {
-    display: block;
-  }
 }
 
 .input--numeric {
-  appearance: none;
+  appearance: textfield;
 }
 
 .input--numeric::-webkit-inner-spin-button,
