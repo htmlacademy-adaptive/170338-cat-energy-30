@@ -39,12 +39,14 @@
   }
 }
 
-.catalog-card__image-wrapper {
-  display: flex;
-
+.catalog-card__image-link {
   @include mixins.mobile {
     grid-row: span 2;
   }
+}
+
+.catalog-card__image-wrapper {
+  display: flex;
 
   @include mixins.tablet {
     height: 210px;
@@ -119,6 +121,10 @@
 }
 
 .catalog-card__title-size {
+  @include mixins.mobile {
+    padding-left: 4px;
+  }
+
   @include mixins.tablet {
     display: block;
   }
@@ -270,4 +276,9 @@
   @include mixins.desktop {
     margin-bottom: 37px;
   }
+}
+
+.catalog-card__link {
+  color: variables.$font-color-primary-alternate-accent;
+  text-decoration: none;
 }
